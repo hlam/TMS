@@ -1,0 +1,76 @@
+html {
+    font-family: Tahoma,sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #FFFFFF;
+	background: none repeat scroll 0 0 transparent !important;
+    font: 13px tahoma,arial,helvetica,clean,sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+.clearb {
+    clear: both;
+}
+#Header {
+    font-family: Tahoma,sans-serif;
+    min-width: 970px;
+}
+#Header .header {
+    font-size: 100%;
+    margin: 15px auto;
+    width: 950px;
+    font-weight: bold;
+    white-space: normal;
+}
+#Header .primaryNav {
+    background-color: #EBF0F7;
+    border-bottom: 2px solid #D5DFE1;
+    margin-bottom: 3px;
+}
+
+#Header .logoArea {
+    color: #9C9C9C;
+    float: left;
+    font-family: Tahoma,sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+}
+#Header .accountLinks {
+    float: right;
+    margin-top: 1.6em;
+}
+#Header .content {
+    height: 39px;
+}
+#wrapper {
+    padding: 0 8px;
+    margin: 0 auto;
+    max-width: 1400px;
+    min-width: 970px;
+    width: 970px;
+}
+#nav_wrapper {
+    border-top: 1px solid #DCDACE;
+    margin-top: 100px;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+#Header .tabs li {
+    background: none repeat scroll 0 0 #EBF0F7;
+    height: 27px;
+    margin: 0 1px 0 0;
+    padding: 0.6em 1.2em 0.1em;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: inline-block;
+    float: left;
+    font-size: 13pt;
+    font-weight: bold;
+    list-style-type: none;
+}

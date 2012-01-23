@@ -1,0 +1,14 @@
+#{extends 'sys.html' /}
+#{set title:'TMS' /}
+#{set 'moreScripts'}
+    <script type="text/javascript">
+        var AppGlobalSetting = {
+            IsAuthenticated:#{if user?.id}true#{/if}#{else}false#{/else}
+            #{if user?.id}
+                ,CurrentUser:{ name: "${user.name}", email: "${user.email}", id: ${user.id} }
+            #{/if}
+            
+        };
+    </script>
+
+#{/set}

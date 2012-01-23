@@ -1,0 +1,78 @@
+Rank(1): {name: кандидат наук, shortNmae: кмн.}
+Rank(2): {name: доктор наук, shortNmae: дмн.}
+Rank(3): {name: доцент, shortNmae: доц.}
+Rank(4): {name: профессор, shortNmae: пр.}
+Rank(5): {name: член-корреспондент, shortNmae: ч-кмн.}
+Rank(6): {name: академик, shortNmae: ак.}
+
+Speciality(1): {name: Акушер}
+Speciality(2): {name: Аллерголог}
+Speciality(3): {name: Анестезиолог}
+Speciality(4): {name: Венеролог}
+Speciality(5): {name: Вирусолог}
+Speciality(6): {name: Гастроэнтеролог }
+Speciality(7): {name: Гинеколог }
+Speciality(8): {name: Дерматолог }
+Speciality(9): {name: Диетолог }
+Speciality(10): {name: Иммунолог }
+Speciality(11): {name: Кардиолог }
+Speciality(12): {name: Нарколог }
+Speciality(13): {name: Невролог }
+Speciality(14): {name: Окулист }
+Speciality(15): {name: Ортопед }
+Speciality(16): {name: Оториноларинголог }
+Speciality(17): {name: Патологоанатом }
+Speciality(18): {name: Педиатр }
+Speciality(19): {name: Проктолог }
+Speciality(20): {name: Психиатр }
+Speciality(21): {name: Пульмонолог }
+Speciality(22): {name: Реаниматолог }
+Speciality(23): {name: Ревматолог }
+Speciality(24): {name: Рентгенолог }
+Speciality(25): {name: Сексолог }
+Speciality(26): {name: Сексопатолог }
+Speciality(27): {name: Сомнолог }
+Speciality(28): {name: Стоматолог }
+Speciality(29): {name: Судмедэксперт }
+Speciality(30): {name: Терапевт }
+Speciality(31): {name: Токсиколог }
+Speciality(32): {name: Травматолог }
+Speciality(33): {name: Уролог }
+Speciality(34): {name: Фармаколог }
+Speciality(35): {name: Физиотерапевт }
+Speciality(36): {name: Хирург }
+Speciality(37): {name: Эметолог }
+Speciality(38): {name: Эндоскопист }
+Speciality(39): {name: Эпидемиолог}
+
+Country(1): {name: Украина}
+
+Region(1): {name: Украина}
+
+Patient(1):  {name: Петров Пациент Петрович, sex: M, birthday: 1970-01-01, country: 1 ,region: 1, zipCode: 03115, city: Киев, address: 'ул.Иванова, 10, 10', address: , isCity: Yes, status: 0}
+Patient(2):  {name: Иванов Пациент Иванович, sex: M, birthday: 1975-02-01, country: 1 ,region: 1, zipCode: 03115, city: Киев, address: 'ул.Петрова, 10, 10',address: , isCity: Yes, status: 0}
+Patient(3):  {name: Сидорова Клава Захаровна, sex: F, birthday: 1980-03-01, country: 1 ,region: 1, zipCode: 07832, city: Киев, address: 'ул.Задворная, 1', address: , isCity: Yes, status: 0}
+
+LPZ(1): {name: ЦТМ,country: 1 ,region: 1, zipCode: 03115, city: Киев, address: 'ул.Иванова, 10, 10', address: 'ул.Петрова, 10, 11', level: 1, type: 1, boss: Осташко Виталий Геннадиевич, zkpo: 1234567890, tel: 0441111111  }
+
+User(1): {name: Петров Пользователь Петрович, email: user@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1980-01-01}
+User(2): {name: Акушер Ольга Специалист, email: advisor1@lpz-1.com, rank: 1, advisor: 1, password: test, sex: F , birthday: 1970-01-01}
+User(3): {name: Айболит Иван Специалист, email: advisor2@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
+User(4): {name: Фрейд Зигмунд Специалист, email: advisor3@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
+
+Advisor(1): {user: 2, speciality: 1, rank: 1, level: 1, type: 1}
+
+Quest(1): {version: 1, lpz: 1, user: 1, patient: 3, type: 0, dateIn: 2011-12-30, dateRes: 2011-12-30, dateOut: 2011-12-25, diagnosIn: Рожает, ICD10: 1234, status: 20}
+Quest(2): {version: 1, lpz: 1, user: 1, patient: 1, type: 0, dateIn: 2011-12-10, dateRes: 2011-12-20, dateOut: 2011-12-15, diagnosIn: Нервничает, ICD10: 1234, status: 20}
+
+
+History(1): {quest: 1, user: 1, advisor: 2, speciality: 1, statusIn: 1, question: "Скоро родит?", dateIn: 2011-12-20, dateRes: 2011-12-30, price: 5.00}
+History(2): {quest: 2, user: 1, advisor: 3, speciality: 30, statusIn: 1, question: "Когда успокоится?", dateIn: 2011-12-10, dateRes: 2011-12-13, diagnos: Как только родит, price: 5.00}
+History(3): {quest: 2, user: 1, advisor: 4, speciality: 13, statusIn: 1, question: "Когда успокоится?", dateIn: 2011-12-10, dateRes: 2011-12-13,  price: 5.00}
+
+LogHistory(1): {history: 1,user: 1, dateEvent: 2011-12-20, event: 1}
+LogHistory(2): {history: 2,user: 1, dateEvent: 2011-12-20, event: 1}
+LogHistory(3): {history: 2,user: 3, dateEvent: 2011-12-21, event: 7}
+LogHistory(4): {history: 2,user: 1, dateEvent: 2011-12-22, event: 20}
+LogHistory(5): {history: 3,user: 1, dateEvent: 2011-12-25, event: 1}
+
