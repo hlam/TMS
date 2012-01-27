@@ -11,6 +11,32 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}
+<div id="Header">
+<div class="header">
+	<div class="logoArea">TMS</div>
+	<div class="accountLinks"><a href="@{Application.sys()}">Войт</a></div>
+	<div class="clearb"></div>
+</div>
+<div class="primaryNav">
+<div class="content">
+<ul class="tabs">
+<li class="pipe"></li>
+<li class="menuitem"><a class="nav-tooltip" href="@{Application.how_work()}">Как это работает</a></li>
+<li class="pipe"></li>
+<li class="menuitem"><a  class="nav-tooltip" href="@{Application.registartion()}">Регистрация</a></li>
+<li class="pipe"></li>
+<li class="menuitem"><a  class="nav-tooltip" href="@{Application.conatcts()}">Котакты</a></li>
+</ul>
+</div>
+</div>
+
+<div id="wrapper">
+  #{doLayout /}
+</div>
+<div class="clearb"></div>
+<div id="nav_wrapper"></div>
+
+</div>
+
     </body>
 </html>

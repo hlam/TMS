@@ -1,11 +1,12 @@
 Ext.Loader.setConfig({enabled:true});
+Ext.Loader.setPath('Ext.ux', 'ext/ux/');
 Ext.application({
     name: 'WebApp',
     autoCreateViewport: AppGlobalSetting.IsAuthenticated,
     //autoCreateViewport: false,
 
     appFolder: 'app_js',
-    controllers: ['Login', 'Menu', 'Customers','Call'],
+    controllers: ['Login', 'Menu', 'Customers', 'Consultations', 'Call'],
     views: ['Call.CallWindow'],
     /* stores: ['Customers'],
     models: ['Customer'],

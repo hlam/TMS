@@ -23,7 +23,7 @@ Ext.define('WebApp.view.Viewer', {
     cls: 'preview'
     ,items: [{
             xtype: 'dashboard',
-            title: 'Dashboard'
+            title: 'Общая информация'
         }]
     /*
 	,

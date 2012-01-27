@@ -18,7 +18,7 @@ Ext.define('WebApp.view.Navigation.Menu', {
 
 	requires: ['Ext.toolbar.Toolbar', 'Ext.menu.Menu'],
 
-    title: 'Navigation',
+    title: 'Навигация',
     iconCls: "IconNavigation",
 	collapsible: true,
 	animCollapse: true,
@@ -26,7 +26,7 @@ Ext.define('WebApp.view.Navigation.Menu', {
 	//layout: 'fit',
 	layout: 'accordion',
     items: [{
-            title: "Customers and Invoices",
+            title: "Консультации и Заявки",
             trackSelection: true,
             collapsed: true,
             iconCls: "IconDocument",
@@ -37,21 +37,72 @@ Ext.define('WebApp.view.Navigation.Menu', {
                     margin: '0 0 10 0',
                     
                     items: [{
-                        text: "Customers",
+                        text: "Консультации",
                         iconCls: "IconUsers",
-                        id: "customers",
-                        classtype:"customergrid",
-                        action:"customers",
+                        id: "consultations",
+                        classtype:"consultationgrid",
+                        action:"consultations",
                     },
                     {
-                        text: "Invoices",
+                        text: "Заявки",
                         iconCls: "IconDocumentInvoice",
                         id: "invoices",
                     }]
                     
             }]
             
-          }]
+          },{
+              title: "Пациэнты и Врачи",
+              trackSelection: true,
+              collapsed: true,
+              iconCls: "IconDocument",
+              
+              items: [{
+                      xtype:"menu",
+                      floating: false,
+                      margin: '0 0 10 0',
+                      
+                      items: [{
+                          text: "Пациэнты",
+                          iconCls: "IconUsers",
+                          id: "patients",
+                          classtype:"patientgrid",
+                          action:"patients",
+                      }, {
+                          text: "Врачи",
+                          iconCls: "IconDocumentInvoice",
+                          id: "docturs",
+                      }]
+                      
+              }]
+              
+            },{
+                title: "Организауии",
+                trackSelection: true,
+                collapsed: true,
+                iconCls: "IconDocument",
+                
+                items: [{
+                        xtype:"menu",
+                        floating: false,
+                        margin: '0 0 10 0',
+                        
+                        items: [{
+                            text: "Клинин",
+                            iconCls: "IconUsers",
+                            id: "clinics",
+                            classtype:"clinicgrid",
+                            action:"clinics",
+                        },                        {
+                            text: "Страховые компании",
+                            iconCls: "IconDocumentInvoice",
+                            id: "insurance_companies",
+                        }]
+                        
+                }]
+                
+              }
+          ]
 /*
       ,dockedItems: [{
 				xtype: 'toolbar',

@@ -1,0 +1,54 @@
+.IconAccept{
+ background-image: url("../Images/IconAccept.png") !important;
+}
+.IconDocument
+{
+ background-image: url("../Images/IconDocument.png") !important;
+}
+.IconUsers
+{
+ background-image: url("../Images/IconUsers.png") !important;
+}
+.IconDocumentInvoice
+{
+ background-image: url("../Images/IconDocumentInvoice.png") !important;
+}
+.IconNavigation
+{
+ background-image: url("../Images/IconNavigation.png") !important;
+}
+.IconApplication
+{
+ background-image: url("../Images/IconApplication.png") !important;
+}
+.IconLogout
+{
+ background-image: url("../Images/IconLogout.png") !important;
+}
+.IconSettings
+{
+ background-image: url("../Images/IconSettings.png") !important;
+}
+.IconPorfile
+{
+ background-image: url("../Images/IconPorfile.png") !important;
+}
+.IconOptions
+{
+ background-image: url("../Images/IconOptions.png") !important;
+}
+.IconHelp
+{
+ background-image: url("../Images/IconHelp.png") !important;
+}
+.IconBug
+{
+ background-image: url("../Images/IconBug.png") !important;
+}
+.IconInformation
+{
+ background-image: url("../Images/IconInformation.png") !important;
+}
+.title-label {
+    color: black;
+}

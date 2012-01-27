@@ -21,6 +21,8 @@ public class Advisor extends Model {
 	public Integer level;
 	@Required
 	public Integer type;
+	
+
     public String toString() {
         return user.name+":"+speciality.name;
     }

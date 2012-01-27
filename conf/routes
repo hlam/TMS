@@ -5,6 +5,9 @@
 # Home page
 GET     /                                       Application.index
 GET     /sys                                    Application.sys
+GET     /how_work                               Application.how_work
+GET     /registartion                                    Application.registartion
+GET     /conatcts                                    Application.conatcts
 POST    /login                                  Application.login
 POST    /logout                                 Application.logout
 

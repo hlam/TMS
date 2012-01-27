@@ -33,7 +33,18 @@ public class Application extends Controller {
     public static void index() {
         render();
     }
-    public static void sys() {
+
+    public static void how_work() {
+        render();
+    }
+    public static void registartion() {
+        render();
+    }
+    public static void conatcts() {
+        render();
+    }
+    
+	public static void sys() {
         render();
     }
     public static void login(String login, String password) {

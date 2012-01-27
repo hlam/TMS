@@ -21,7 +21,11 @@ public class Quest extends Model {
 	@Required
 	@ManyToOne
 	public User user;
-	
+
+	@Required
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "quest")
+	public List<History> histories;
+
 	@Required
 	@ManyToOne
 	public Patient patient;
@@ -37,10 +41,10 @@ public class Quest extends Model {
 	@Lob
 	@MaxSize(20000)
 	public String diagnosIn;
-	@Max(4)
+	@MaxSize(4)
 	public String ICD10;
 	@Required
-	public Integer status;
+	public byte status;
 	
     public String toString() {
         return diagnosIn;

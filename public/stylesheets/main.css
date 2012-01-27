@@ -46,7 +46,8 @@ body {
 }
 #Header .content {
     height: 39px;
-}
+    margin: auto;
+    width: 950px;}
 #wrapper {
     padding: 0 8px;
     margin: 0 auto;
@@ -59,6 +60,25 @@ body {
     margin-top: 100px;
     padding-bottom: 40px;
     width: 100%;
+}
+#Header .tabs {
+   padding: 0 0 0 1px;
+    width: auto;
+    float: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 0;
+}
+#Header .tabs li.pipe {
+    height: 31px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0.4em;
+    width: 10px;
+    border-left:1px solid #CCCCCC
 }
 
 #Header .tabs li {
@@ -73,4 +93,30 @@ body {
     font-size: 13pt;
     font-weight: bold;
     list-style-type: none;
+}
+#Header .tabs li a {
+    color: #666666;
+}
+#Header .tabs li a {
+    background: none repeat scroll 0 0 transparent;
+    color: #7B7872;
+    padding: 0;
+    text-decoration: none;
+}
+.tabs li a {
+    display: block;
+    padding: 7px 13px 4px 10px;
+    text-decoration: none;
+}
+ul.innertabs li a:focus, a:active {
+    outline: medium none;
+}
+a:link, a:visited, a:hover, a:active {
+    border: medium none;
+    color: #0033FF;
+    text-decoration: none;
+}
+a {
+    color: #0033FF;
+    font-size: inherit;
 }

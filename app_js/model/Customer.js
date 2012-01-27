@@ -24,3 +24,4 @@ Ext.define('WebApp.model.Customer', {
         'Fax','Email', 'Mobile', 'Phone','Zip'
     ]
 });
+
