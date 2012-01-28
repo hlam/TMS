@@ -32,7 +32,7 @@ public class Quest extends Model {
 	@Required
 	public Integer type;
 	@Required
-	public Date dateIn;
+	public Date dateIn  = new Date();
 	@Required
 	public Date dateRes;
 	public Date dateOut;

@@ -19,6 +19,8 @@ public class User extends Model {
 	@Email
 	public String email;
 	
+	@Required
+	@ManyToOne
 	public Rank rank;
 	@Required
 	public boolean advisor;

@@ -11,6 +11,7 @@ import models.History;
 import models.Quest;
 
 public class SimplePatient {
+	public Long id;
 	public String name;
 	public int age;
 	
@@ -33,6 +34,7 @@ public class SimplePatient {
 	}
 	public static void ConvertImtem(Calendar cal, Calendar dbo, Patient i,
 			SimplePatient item) {
+		item.id = i.getId();
 		item.name = i.name;
 		dbo.setTime(i.birthday);
 		item.age = cal.get(Calendar.YEAR)-dbo.get(Calendar.YEAR);

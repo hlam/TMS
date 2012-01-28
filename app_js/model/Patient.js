@@ -20,19 +20,8 @@ Ext.define('WebApp.model.Patient', {
     },
 
    
-    fields: [ 'name', 'sex',  'age', 'Country','City','Address',
+    fields: [ 'id','name', 'sex',  'age', 'Country','City','Address',
          'status', 'tel ','zipCode '
     ]
 });
 
-Ext.define('WebApp.model.comboPatient', {
-    extend: 'Ext.data.Model',
-        proxy: {
-        type: 'rest',
-        url: 'Patient/combo'
-    },
-
-   
-    fields: [ 'name', 'sex',  'age', 'Country','City'
-    ]
-});

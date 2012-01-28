@@ -56,7 +56,7 @@ Patient(3):  {name: Сидорова Клава Захаровна, sex: F, birt
 LPZ(1): {name: ЦТМ,country: 1 ,region: 1, zipCode: 03115, city: Киев, address: 'ул.Иванова, 10, 10', address: 'ул.Петрова, 10, 11', level: 1, type: 1, boss: Осташко Виталий Геннадиевич, zkpo: 1234567890, tel: 0441111111  }
 
 User(1): {name: Петров Пользователь Петрович, email: user@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1980-01-01}
-User(2): {name: Акушер Ольга Специалист, email: advisor1@lpz-1.com, rank: 1, advisor: 1, password: test, sex: F , birthday: 1970-01-01}
+User(2): {name: Акушер Ольга Специалист, email: advisor1@lpz-1.com, rank: 1, lpz: 1, advisor: 1, password: test, sex: F , birthday: 1970-01-01}
 User(3): {name: Айболит Иван Специалист, email: advisor2@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
 User(4): {name: Фрейд Зигмунд Специалист, email: advisor3@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
 

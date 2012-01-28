@@ -1,5 +1,8 @@
 Ext.Loader.setConfig({enabled:true});
 Ext.Loader.setPath('Ext.ux', 'ext/ux/');
+Ext.Error.handle = function(err) {
+	console.log(err);
+};
 Ext.application({
     name: 'WebApp',
     autoCreateViewport: AppGlobalSetting.IsAuthenticated,

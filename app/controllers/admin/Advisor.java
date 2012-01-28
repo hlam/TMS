@@ -7,5 +7,5 @@ import play.*;
 import java.util.*;
 
 
-@CRUD.For(models.Quest.class)
+@CRUD.For(models.Advisor.class)
 public class Advisor extends CRUD  {}
