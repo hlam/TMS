@@ -44,7 +44,19 @@ public class Quest extends Model {
 	@MaxSize(4)
 	public String ICD10;
 	@Required
-	public byte status;
+	public byte status=1;
+	
+	public String getStatusName(){
+		switch(this.status){
+		case 1: 
+			return "запрос";
+		case 5: 
+			return "в работе";	
+		case 20: 
+			return "закрытое";	
+		}
+		return "";
+	}
 	
     public String toString() {
         return diagnosIn;

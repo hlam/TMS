@@ -18,14 +18,16 @@ Ext.define('WebApp.model.Consultation', {
         type: 'rest',
         url: 'Consultation/list'
     },
+    
 
-   
     fields: [ {name:'patient.name', mapping:'patientName'}, 
               {name:'history.speciality.name', mapping:'speciality'},
               {name:'history.advisor.name', mapping:'advisorName'},
               
               'advisor',
                'dateIn','dateRes',
-        'ICD10','status', 'diagnosIn'
+        'ICD10',
+        {name:'status', mapping:'status_name'},
+        'diagnosIn'
     ]
 });

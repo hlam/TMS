@@ -1,6 +1,7 @@
 package controllers;
 
 import play.*;
+import play.data.validation.Valid;
 import play.mvc.*;
 
 import java.util.*;
@@ -37,9 +38,41 @@ public class Application extends Controller {
     public static void how_work() {
         render();
     }
+    private static void initregistartion(){
+        renderArgs.put("lpz_list", LPZ.find("order by name").fetch());
+        renderArgs.put("rank_list", Rank.find("order by name").fetch());
+        renderArgs.put("speciality_list", models.Speciality.find("order by name").fetch());
+        renderArgs.put("user", new User());
+    
+    }
     public static void registartion() {
+    	initregistartion();
         render();
     }
+     
+    public static void registerUser(@Valid User user, String verifyPassword,  Long speciality_id) {
+    	validation.required(verifyPassword);
+        validation.required(speciality_id);
+        validation.equals(verifyPassword, user.password).message("Пароль не совпажает");
+        System.out.println(verifyPassword+"="+user.password);
+        System.out.println("speciality_id="+speciality_id);
+
+        
+        if(validation.hasErrors()) {
+        	initregistartion();
+            render("@registartion", user, verifyPassword, speciality_id);
+        }
+        user.create();
+        models.Advisor advisor = new models.Advisor();
+        advisor.speciality = models.Speciality.findById(speciality_id);
+        advisor.user = user;
+        advisor.save();
+         
+        session.put("user", user.id);
+        redirect("Application.sys");
+        
+    }
+
     public static void conatcts() {
         render();
     }

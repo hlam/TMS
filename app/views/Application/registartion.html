@@ -1,5 +1,98 @@
 #{extends 'main.html' /}
-#{set title:'Региструия консульнатнта' /}
+#{set title:'Региструия консультанта' /}
+#{set 'moreStyles'}
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/ui-lightness/jquery-ui-1.8.17.custom.css'}">
+#{/set}
+#{set 'moreScripts'}
+        <script src="@{'/public/javascripts/jquery-ui-1.8.17.custom.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/i18n/jquery.ui.datepicker-ru.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+#{/set}
+<h1>Регистрация консультанта</h1>
+#{form @registerUser()}
+    #{field 'user.lpz.id'}
+        <p class="${field.errorClass}">
+            <strong>Организация:</strong> 
+            <select  name="${field.name}">
+         		<option value="">Выберите...</option>
+				#{list items:lpz_list, as:'item'}
+         		<option #{if user?.lpz?.id==item.id}selected#{/if} value="${item.id}">${item.name}</option>
+				#{/list}
+			</select>
+             *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
+    #{field 'user.rank.id'}
+        <p class="${field.errorClass}">
+            <strong>Звание:</strong> 
+            <select name="${field.name}" >
+         		<option  value="">Выберите...</option>
+				#{list items:rank_list, as:'item'}
+         		<option #{if user?.rank?.id==item.id}selected#{/if}  value="${item.id}">${item.name}</option>
+				#{/list}
+			</select>
+             *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
+    
+    #{field 'speciality_id'}
+        <p class="${field.errorClass}">
+            <strong>Специальность:</strong>
+             <select name="${field.name}" >
+         		<option  value="">Выберите...</option>
+				#{list items:speciality_list, as:'item'}
+         		<option #{if speciality_id==item.id}selected#{/if}  value="${item.id}">${item.name}</option>
+				#{/list}
+			</select>
+             *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
 
-<h1>Региструия консульнатнта</h1>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    #{field 'user.name'}
+        <p class="${field.errorClass}">
+            <strong>ФИО:</strong> <input type="text" name="${field.name}" size="16" value="${user?.name}"> *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
+    #{field 'user.email'}
+        <p class="${field.errorClass}">
+            <strong>Email:</strong> <input type="text" name="${field.name}" size="16" value="${user?.email}"> *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
+    #{field 'user.password'}
+        <p class="${field.errorClass}">
+            <strong>Password:</strong> <input type="password" name="${field.name}" size="16" value="${user?.password}"> *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
+    #{field 'verifyPassword'}
+        <p class="${field.errorClass}">
+            <strong>Verify password:</strong> <input type="password" name="${field.name}" size="16" value="${verifyPassword}"> *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}    
+    #{field 'user.sex'}
+        <p class="${field.errorClass}">
+            <strong>Пол:</strong>
+             <select name="${field.name}">
+         		<option value="">Выберите...</option>
+         		<option #{if user?.sex=='M'}selected#{/if} value="M">Мужчина</option>
+         		<option #{if user?.sex=='F'}selected#{/if} value="F">Женшина</option>
+         	</select>
+             *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
+    #{field 'user.birthday'}
+        <p class="${field.errorClass}">
+            <strong>День рождения(dd.MM.yy):</strong> <input type="text" name="${field.name}" size="16" class="forpicker_cons_dob" value="${user?.birthday?.format('dd.MM.yyyy')}"> *
+            <span class="error">${field.error}</span>
+        </p>
+    #{/field}
+    <p class="buttons">
+        <input type="submit" value="Отправить"> <a href="@{index()}">Отмена</a>    
+    </p>
+#{/form}

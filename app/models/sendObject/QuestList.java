@@ -19,6 +19,7 @@ public class QuestList {
 	public String question;
 	public String ICD10;
 	public byte status;
+	public String status_name;
 	
 	public static List<QuestList> Conver(List<Quest> quests){
 		List<QuestList> ret; 
@@ -30,6 +31,7 @@ public class QuestList {
 			item.dateRes = q.dateRes;
 			item.ICD10 = q.ICD10;
 			item.status = q.status;
+			item.status_name = q.getStatusName();
 			item.diagnosIn = q.diagnosIn.length()>200?q.diagnosIn.substring(0, 200)+" ...":q.diagnosIn;
 			if(q.histories.size()>0){
 				History history = q.histories.get(0);

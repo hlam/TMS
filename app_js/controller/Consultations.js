@@ -1,8 +1,8 @@
 Ext.define('WebApp.controller.Consultations', {
     extend: 'Ext.app.Controller',
 
-    stores: ['Consultations','ComboPatients','Patients', 'Specialities', 'ComboAdvisors'],
-    models: ['Consultation','ComboPatient','Patient','Speciality', 'ComboAdvisor'],
+    stores: ['Consultations',  'ComboPatients','Patients', 'Specialities', 'ComboAdvisors'],
+    models: ['Consultation',  'ComboPatient','Patient','Speciality', 'ComboAdvisor'],
     views: ['Consultation.Grid', 'Consultation.Add'],
 
 
