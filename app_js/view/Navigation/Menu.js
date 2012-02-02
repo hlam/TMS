@@ -52,7 +52,7 @@ Ext.define('WebApp.view.Navigation.Menu', {
             }]
             
           },{
-              title: "Пациэнты и Врачи",
+              title: "Пациенты и Врачи",
               trackSelection: true,
               collapsed: true,
               iconCls: "IconDocument",
@@ -63,7 +63,7 @@ Ext.define('WebApp.view.Navigation.Menu', {
                       margin: '0 0 10 0',
                       
                       items: [{
-                          text: "Пациэнты",
+                          text: "Пациенты",
                           iconCls: "IconUsers",
                           id: "patients",
                           classtype:"patientgrid",
@@ -77,7 +77,7 @@ Ext.define('WebApp.view.Navigation.Menu', {
               }]
               
             },{
-                title: "Организауии",
+                title: "Организации",
                 trackSelection: true,
                 collapsed: true,
                 iconCls: "IconDocument",
@@ -88,7 +88,7 @@ Ext.define('WebApp.view.Navigation.Menu', {
                         margin: '0 0 10 0',
                         
                         items: [{
-                            text: "Клинин",
+                            text: "Клиники",
                             iconCls: "IconUsers",
                             id: "clinics",
                             classtype:"clinicgrid",

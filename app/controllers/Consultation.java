@@ -11,7 +11,7 @@ import extjs.*;
 import models.*;
 import models.sendObject.QuestList;	
 import models.sendObject.UserLogin;
-
+import play.data.binding.As;
 import play.mvc.*;
 
 public class Consultation extends Controller {
@@ -35,7 +35,7 @@ public class Consultation extends Controller {
         renderJSON(list);
     }
     
-    public static void add(Long patient_id, String diagnosIn, Long speciality_id,  Long advisor_id, String question, Date dateRes, BigDecimal price	) {
+    public static void add(Long patient_id, String diagnosIn, Long speciality_id,  Long advisor_id, String question, @As("MM/dd/yyyy") Date dateRes, BigDecimal price	) {
     	User user = Application.connected();
     	Quest quest=new Quest();
     	quest.user = user;
