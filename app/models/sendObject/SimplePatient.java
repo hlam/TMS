@@ -36,9 +36,11 @@ public class SimplePatient {
 			SimplePatient item) {
 		item.id = i.getId();
 		item.name = i.name;
-		dbo.setTime(i.birthday);
-		item.age = cal.get(Calendar.YEAR)-dbo.get(Calendar.YEAR);
-		if(dbo.get(Calendar.DAY_OF_YEAR)>=cal.get(Calendar.DAY_OF_YEAR)) item.age--;
+		if(i.birthday!=null){
+			dbo.setTime(i.birthday);
+			item.age = cal.get(Calendar.YEAR)-dbo.get(Calendar.YEAR);
+			if(dbo.get(Calendar.DAY_OF_YEAR)>=cal.get(Calendar.DAY_OF_YEAR)) item.age--;
+		}
 		item.sex = i.sex;
 		item.country = i.country.name;
 		item.city = i.city;
