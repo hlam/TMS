@@ -1,39 +1,37 @@
-Ext.define('WebApp.controller.Consultations', {
+Ext.define('WebApp.controller.Patients', {
     extend: 'Ext.app.Controller',
 
-    stores: ['Consultations',  'ComboPatients','Patients', 'Specialities', 'ComboAdvisors'],
-    models: ['Consultation',  'ComboPatient','Patient','Speciality', 'ComboAdvisor'],
-    views: ['Consultation.Grid', 'Consultation.Add'],
+    stores: ['Patients','ComboSexs','Countries'],
+    models: ['Patient', 'Country'],
+    views: ['Patient.Grid', 'Patient.Add'],
 
 
     refs: [
-    { ref: 'addbtn', selector: 'consultationgrid [action=add]' },
-    { ref: 'addSpeciality', selector: 'speciality_id' },
-    { ref: 'addAdvisor', selector: 'advisor_id' },
+    { ref: 'addbtn', selector: 'patientgrid [action=add]' },
     
     {
         ref: 'addWindow', 
-        selector: 'addconsultationwindow', 
+        selector: 'addpatientnwindow', 
         autoCreate: true,
-        xtype: 'addconsultationwindow'
+        xtype: 'addpatientwindow'
     },
-    { ref: 'addForm', selector: 'addconsultationwindow form' },
-    { ref: 'consultationGrid', selector: 'consultationgrid' },
+    { ref: 'addForm', selector: 'addpatientwindow form' },
+    { ref: 'grid', selector: 'patientgrid' },
     
     ],
-    url_add:'Consultation/add',
+    url_add:'Patient/add',
     init: function () {
         this.control({
-            'consultationgrid button[action=add]': {
+            'patientgrid button[action=add]': {
                 click: this.add
             },
-            'addconsultationwindow button[action=add]': {
-                click: this.addConsultation
+            'addpatientwindow button[action=add]': {
+                click: this.addPatient
             },
-            'addconsultationwindow button[action=close]': {
-                click: this.closeConsultation
+            'addpatientwindow button[action=close]': {
+                click: this.closePatient
             },
-            'consultationgrid': {
+            'patientgrid': {
                 select: this.rowSelect
             },
             'speciality_id': {
@@ -42,13 +40,13 @@ Ext.define('WebApp.controller.Consultations', {
 
         });
     },
-    closeConsultation: function(){
+    closePatient: function(){
         var addWindow = this.getAddWindow();
         var addForm =this.getAddForm();
         addForm.getForm().reset()
         addWindow.close();
     },
-    addConsultation: function(){
+    addPatient: function(){
         var win = this.getAddWindow();
         var form =this.getAddForm();
         record = form.getRecord(),
@@ -61,7 +59,7 @@ Ext.define('WebApp.controller.Consultations', {
 			url: this.url_add,
 	        scope: this,
 	        success: function(form, action) {
-	        		var grid= this.getConsultationGrid();
+	        		var grid= this.getGrid();;
 	        		grid.store.load();
 	        		form.reset()
 					win.close();
@@ -79,8 +77,8 @@ Ext.define('WebApp.controller.Consultations', {
         console.log("add consultants");
         /*
         var info = {
-                xtype: "addconsultationwindow",
-                id: "addconsultationwindow"
+                xtype: "addpatientwindow",
+                id: "addpatientwindow"
             };
         var addWindow = Ext.ComponentManager.create(info, 'component');
         */

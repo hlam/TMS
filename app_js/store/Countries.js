@@ -1,7 +1,7 @@
-Ext.define('WebApp.store.Specialities', {
+Ext.define('WebApp.store.Countries', {
     extend: 'Ext.data.Store',
     autoLoad: true,
-    model: 'WebApp.model.Speciality',
+    model: 'WebApp.model.Country',
     buffered:true,
     pageSize:50
 });

@@ -9,7 +9,7 @@ Ext.application({
     //autoCreateViewport: false,
 
     appFolder: 'app_js',
-    controllers: ['Login', 'Menu', 'Customers', 'Consultations', 'Call'],
+    controllers: ['Login', 'Menu', 'Customers', 'Consultations', 'Call','Patients'],
     views: ['Call.CallWindow'],
     /* stores: ['Customers'],
     models: ['Customer'],

@@ -34,7 +34,16 @@ public class Patient extends Controller {
 
         renderJSON(list);
     }
-    
+    public static void combo(String query) {
+    	//User user = Application.connected();
+    	query = query.toLowerCase();
+    	StoreArgs storeArgs = new StoreArgs();
+    	String find ="  lower(name) like ? OR lower(city) like ? order by name ";
+    	List<models.Patient> items = models.Patient.find(find,  "%"+query+"%", "%"+query+"%").fetch(storeArgs.page, storeArgs.limit);
+    	List<PatientList> list = PatientList.ConverPatient(items);
+        renderJSON(list);
+    }
+
     public static void add(String name, String sex, @As("MM/dd/yyyy") Date birthday, Long country_id,  String zipCode, String city,  String address,  String address1,  String tel	) {
     	User user = Application.connected();
     	models.Patient parient =new models.Patient();

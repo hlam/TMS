@@ -16,11 +16,13 @@ Ext.define('WebApp.model.Patient', {
     extend: 'Ext.data.Model',
         proxy: {
         type: 'rest',
-        url: 'Patient'
+        url: 'Patient/list'
     },
 
    
-    fields: [ 'id','name', 'sex',  'age', 'Country','City','Address',
+    fields: [ 'id','name', 'sex',  'age',
+              'country',
+              'city','address',
          'status', 'tel ','zipCode '
     ]
 });

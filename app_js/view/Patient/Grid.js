@@ -12,82 +12,61 @@ This file may be used under the terms of the GNU General Public License version 
 If you are unsure which license is appropriate for your use, please contact the sales department at http://www.sencha.com/contact.
 
 */
-Ext.define('WebApp.view.Customer.Grid', {
+Ext.define('WebApp.view.Patient.Grid', {
 	extend: 'Ext.grid.Panel',
-	alias: 'widget.customergrid',
-
-	cls: 'customer-grid',
+	alias: 'widget.patientgrid',
+	cls: 'patient-grid',
 	disabled: false,
           
 	border: false,
     
-	store: 'Customers',
-	requires: ['Ext.toolbar.Toolbar'],
+	store: 'Patients',
+	requires: ['Ext.toolbar.Toolbar','Ext.ux.PreviewPlugin'],
 
 	columns: [{
-		text: 'FirstName',
-		dataIndex: 'FirstName',
+		text: 'Пациет',
+		dataIndex: 'name',
 		width: 200
+
 	}, {
-		text: 'Country',
-		dataIndex: 'Country',
-		width: 200
+		text: 'Пол',
+		dataIndex: 'sex'
 	}, {
-		text: 'State',
-		dataIndex: 'State',
-		width: 200
-    }, {
-        text: 'City',
-        dataIndex: 'City',
-        width: 200
-    }, {
-        text: 'Address',
-        dataIndex: 'Address',
-        width: 200
-    }, {
-        text: 'Fax',
-        dataIndex: 'Fax',
-        width: 200
-    }, {
-        text: 'Email',
-        dataIndex: 'Email',
-        width: 200
-    }, {
-        text: 'Mobile',
-        dataIndex: 'Mobile',
-        width: 200
-    }, {
-        text: 'Phone',
-        dataIndex: 'Phone',
-        width: 200
-    }, {
-        text: 'Zip',
-        dataIndex: 'Zip',
-        width: 200
+		text: 'Возраст',
+		dataIndex: 'age'
+    },{
+		text: 'Страна',
+		dataIndex: 'country'
+    },{
+		text: 'Город',
+		dataIndex: 'city'
+    },
+     {
+        text: 'Сатус',
+        dataIndex: 'status',
+        width: 70
     }
 ],
     dockedItems: [{
         xtype: 'toolbar',
         dock: 'top',
         items: [{
-            text: 'Call',
-            action: 'call',
-            name: 'call',
-            disabled:true
+            text: 'Добавить',
+            action: 'add',
+            name: 'add_patient',
+            disabled:false
         }]
 
     }
-
     ,
     {
         xtype: 'pagingtoolbar',
         dock: 'bottom',
-        store: 'Customers',
+        store: 'Patients',
             pageSize: 25,
             displayInfo: true
 
     }
-
     ]
 
 });
