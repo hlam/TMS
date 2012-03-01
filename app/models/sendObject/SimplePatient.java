@@ -5,6 +5,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import play.i18n.Lang;
+
 import models.Patient;
 
 import models.History;
@@ -19,7 +21,7 @@ public class SimplePatient {
 	public String country;
 	public String city;
 	public Integer status;
-	public static List<SimplePatient> Conver(List<Patient> patients){
+	public static List<SimplePatient> Convert(List<Patient> patients){
 		List<SimplePatient> ret; 
 		ret = new ArrayList<SimplePatient>();
 		Calendar cal = Calendar.getInstance();
@@ -42,7 +44,7 @@ public class SimplePatient {
 			if(dbo.get(Calendar.DAY_OF_YEAR)>=cal.get(Calendar.DAY_OF_YEAR)) item.age--;
 		}
 		item.sex = i.sex;
-		item.country = i.country.name;
+		item.country = i.country.getName();
 		item.city = i.city;
 		item.status = i.status;
 	}

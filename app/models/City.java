@@ -9,12 +9,17 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-public class Country extends Model {
-
+public class City extends Model {
+/*	
+    @OneToMany
+    @MapKey(name = "lang")
+    public Map<String, SomeText> name;
+*/    
     public String name_ru;
     public String name_uk;
     public String name_en;
-    
+    @ManyToOne
+    public Region region;
     public String toString() {
         return getName();
     }
@@ -24,7 +29,7 @@ public class Country extends Model {
     	else if(Lang.get().equals("uk"))
 			return name_uk;
     	else return name_en;
-    }
 
+    }
 
 }

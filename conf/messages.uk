@@ -1,0 +1,58 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+site.title=Українська Телемедична Система
+site.your_login = Ваш логін
+site.your_password = Ваш пароль
+site.singin = Увійти на сайт
+site.language = Мова
+site.login_error = <p> <span> Неправильний логін / пароль </spam> (<a title="Забули пароль?" href="/forgotpassword"> Забули пароль? </a>) </p> <p>Перевірте правильність введення, нам здається, щось не так. </p> Ви ще не на сайті? <a href="/registartion">Зареєструватися</a>. </p>
+site.agreement = Угода
+site.how_it_work = Як це працює?
+site.contacts = Контакти
+site.registration = Реєстрація
+site.parters = Нашим партнерам
+site.help = Допомога
+site.site_map = Карта сайту
+site.blog = Наш блог
+site.singup_as = %s
+
+site.select = Виберіть ...
+site.region = Область
+site.city = Місто
+site.organisation = Організація
+site.name = Назва
+site.zipcode = Індекс
+site.address = Адреса
+site.zkpo = ЗКПО
+site.tel = Телефон
+
+site.user = Користувач
+site.rank = Звання
+site.speciality = Спеціальність
+site.fio = ПІБ
+site.sex = Пол
+site.sex_m = Чоловік
+site.sex_f = Женшина
+site.birthday = День народження(%s)
+site.password = Пароль
+site.verify_password = Перевірка пароля
+site.type_code = Будь ласка, введіть код
+site.send = Відправити
+site.cancel = Скасувати
+site.have_create_lpz = Організації немає в списки. Створити нову?
+site.send_password = Нагадування пароля
+site.password_sended = Пароль відправлений на email
+
+validation.required=Обов'язкове для заповнення
+validation.email=Невірний формат
+validation.minSize = Кількість символів має бути більше ніж %d
+
+validation.req_code = Заполните код
+validation.invalid_captche  = Не верный код. Попробуйте еще!
+validation.password_nomatch = Пароль не совпадает
+validation.user_exist = Користувач уже існує
+validation.user_not_exist = Користувач не існує
+
+mail.welcome = Ласкаво просимо %s
+mail.sendpassword = Выш пароль

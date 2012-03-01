@@ -24,7 +24,7 @@ public class Advisor extends Model {
 	
 
     public String toString() {
-        return user.name+":"+speciality.name;
+        return user.name+":"+speciality.getName();
     }
 
 }

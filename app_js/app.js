@@ -20,10 +20,15 @@ Ext.application({
             var login = this.getController("Login")
             login.showLogin();
             Ext.require([this.getModuleClassName('Viewport', 'view')]);
+        }else{
+            var menu = this.getController("Menu")
+            menu.getMessages();
         }
     },
     startApp: function () {
         this.getView('Viewport').create();
+        var menu = this.getController("Menu")
+        menu.getMessages()
         /*
 
         Ext.create('Ext.container.Viewport', {

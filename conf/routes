@@ -7,9 +7,23 @@ GET     /                                       Application.index
 GET     /sys                                    Application.sys
 GET     /how_work                               Application.how_work
 GET     /registartion                                    Application.registartion
+POST    /registartion                                    Application.registerUser
+GET     /forgotpassword                                    Application.forgotpassword
+POST    /forgotpassword                                    Application.sendpassword
 GET     /conatcts                                    Application.conatcts
+GET     /lookup/city                                    Application.lookupCity
+GET     /lookup/lpz                                    Application.lookupLPZ
 POST    /login                                  Application.login
+POST    /user/login                                  Application.loginForm
 POST    /logout                                 Application.logout
+GET     /captcha                                Application.captcha
+GET 	/validate/code							Application.validateCapcher	
+GET 	/validate/email							Application.validateExsistUser	
+GET 	/validate/exist_email							Application.validateNotExsistUser		
+GET 	/validate/exist_email							Application.validateNotExsistUser		
+
+GET     /room/messages              LongPolling.waitMessages
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

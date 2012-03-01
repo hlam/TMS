@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-public class LPZ extends Model {
+public class Lpz extends Model {
 
 	@Required
 	public String name;
@@ -18,22 +18,20 @@ public class LPZ extends Model {
 	public Country country;
 	@Required
 	@ManyToOne
-	public Region region;
+	public City city;
 	
 	@Required
 	@MaxSize(5)
 	public String zipCode;
-	@Required
-	public String city;
 	@Required
 	@MaxSize(150)
 	public String address;
 	@MaxSize(150)
 	public String address1;
 	
-	@Required
+	// @Required
 	public Integer level;
-	@Required
+	// @Required 
 	public Integer type;
 	
 	public String boss;
@@ -42,6 +40,8 @@ public class LPZ extends Model {
 	
 	@Phone
 	public String tel;
+	@Required 
+	public Boolean confirm=false;
 	
     public String toString() {
         return name;

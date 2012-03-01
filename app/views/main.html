@@ -2,42 +2,124 @@
 
 <html>
     <head>
-        <title>#{get 'title' /}</title>
+        <title>#{get 'title' /}  &{'site.title'}</title>
         <meta charset="${_response_encoding}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
         <script src="@{'/public/javascripts/jquery-1.7.1.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/jquery.form.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         #{get 'moreScripts' /}
         <script src="@{'/public/javascripts/main.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     </head>
-    <body>
-<div id="Header">
-<div class="header">
-	<div class="logoArea">Ukraine Telemedical System</div>
-	<div class="accountLinks"><a href="@{Application.sys()}">Войти в систему</a></div>
-	<div class="clearb"></div>
-</div>
-<div class="primaryNav">
-<div class="content">
+    <body data-format="${play.libs.I18N.getDateFormat()}" lang="${lang}">
+<div id="main">   
+
+<div id="header">
+				<div class="header">
+					<a  class="logo" href="/" >&{'site.title'}</a>
+					<div class="user-login">
+						<div class="clearfix">
+						#{if user?.id}
+							<form action="/user/login" method="post" id="intro_login_form">
+								<div class="singup_as">&{'site.singup_as', user.name}</div>
+								<input type="submit" tabindex="14" value="&{'site.singin'}" class="button" id="intro_login_form_submiter" style="display: block;">
+							</form>
+            			#{/if}
+            			#{else}
+							<form action="/user/login" method="post" id="intro_login_form">
+								<input type="text" tabindex="12" value="" jq-placeholder="&{'site.your_login'}" name="login" id="intro_login" class="error">
+								<input type="password" tabindex="13" name="password" id="intro_pwd" style="display: none;">
+								<input type="text" tabindex="13" value="&{'site.your_password'}" id="intro_pwd2" >
+								<input type="submit" tabindex="14" value="&{'site.singin'}" class="button" id="intro_login_form_submiter" style="display: block;">
+								<!--spinner-->
+								<span style="display: none;"  id="intro_form_spinner"></span>
+								<div class="login-error" id="login-error" style="display: none;">
+									<div class="arrow">&nbsp;</div>
+									&{'site.login_error'}
+								</div>
+							</form>
+						#{/else}
+			            </div>
+		            </div>
+					<div class="langs-list" id="langs-list">
+					<span id="select-lang">&{'lang.'+lang}</span>
+					<ul id="langs-menu">
+					<li>
+					&{'lang.'+lang}
+					</li>
+					#{list play.langs, as:'lng'}
+					#{if lng!=lang}
+					<li>
+					<a href="?lang=${lng}">&{'lang.'+lng}</a>
+					</li>
+					#{/if}
+					#{/list}
+					</ul>
+					</div>
+					<div class="langs">
+					&{'site.language'}:
+					</div>
+				</div>
+			</div>
+
+ 
+<div id="menu">
+<div class="menu">
 <ul class="tabs">
 <li class="pipe"></li>
-<li class="menuitem"><a class="nav-tooltip" href="@{Application.how_work()}">Как это работает?</a></li>
+<li class="menuitem"><a class="nav-tooltip" href="@{Application.how_work()}">&{'site.how_it_work'}</a></li>
 <li class="pipe"></li>
-<li class="menuitem"><a  class="nav-tooltip" href="@{Application.registartion()}">Регистрация</a></li>
+<li class="menuitem"><a  class="nav-tooltip" href="@{Application.registartion()}">&{'site.registration'}</a></li>
 <li class="pipe"></li>
-<li class="menuitem"><a  class="nav-tooltip" href="@{Application.conatcts()}">Контакты</a></li>
+<li class="menuitem"><a  class="nav-tooltip" href="@{Application.conatcts()}">&{'site.contacts'}</a></li>
 </ul>
+
 </div>
 </div>
 
 <div id="wrapper">
-  #{doLayout /}
-</div>
-<div class="clearb"></div>
-<div id="nav_wrapper"></div>
+<div class="main">
+		#{if flash?.error}
+					<div class="flash_error">${flash.error}</div>
+		#{/if}
+				
+		#{if flash?.success}
+					<div class="flash_success">${flash.success}</div>
+		#{/if}
 
+  #{doLayout /}
+  </div>
 </div>
+
+<div id="footer">
+			<div class="footer">
+				<div class="menu">
+					<div class="bold">
+						<a c href="/agreement">&{'site.agreement'}</a>
+						<a href="{Application.how_work()}">&{'site.how_it_work'}</a>
+						<a href="@{Application.conatcts()}"">&{'site.contacts'}</a>
+						<a href="@{Application.registartion()}">&{'site.registration'}</a>
+						<a href="/parters">&{'site.parters'}</a>
+
+						
+						
+						<div class="cleaner"></div>
+						<a  href="/knowledgebase">&{'site.help'}</a>
+						<a href="/sitemap">&{'site.site_map'}</a>
+						<div class="cleaner"></div>
+					</div>
+				</div>
+				<div class="copyright">
+					&{'site.title'} &copy; 20011&mdash;2012
+					<div>
+						<a href="mailto:info@tms.org">info@tms.org</a>
+						&nbsp;
+						<a target="_blank" href="http://blog">&{'site.blog'}</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
     </body>
 </html>

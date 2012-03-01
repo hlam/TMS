@@ -17,7 +17,7 @@ public class Quest extends Model {
 	
 	@Required
 	@ManyToOne
-	public LPZ lpz;
+	public Lpz lpz;
 	@Required
 	@ManyToOne
 	public User user;

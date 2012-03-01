@@ -1,64 +1,289 @@
-Rank(1): {name: кандидат наук, shortNmae: кмн.}
-Rank(2): {name: доктор наук, shortNmae: дмн.}
-Rank(3): {name: доцент, shortNmae: доц.}
-Rank(4): {name: профессор, shortNmae: пр.}
-Rank(5): {name: член-корреспондент, shortNmae: ч-кмн.}
-Rank(6): {name: академик, shortNmae: ак.}
+Rank(1): {name_ru: кандидат наук, shortName_ru: кмн., name_uk: кандидат наук, shortName_uk: кмн., name_en: Doctor of Philosophy, shortName_en: Ph.D}
+Rank(2): {name_ru: доктор наук, shortName_ru: дмн., name_uk: доктор наук, shortName_uk: дмн. ,name_en: Doctor of Science , shortName_en: Sc.D}
+Rank(3): {name_ru: доцент, shortName_ru: доц., name_uk: доцент, shortName_uk: доц., name_en: associate professor, shortName_en: Assoc. Prof.}
+Rank(4): {name_ru: профессор, shortName_ru: пр., name_uk: професор, shortName_uk: пр., name_en: professor, shortName_en: Prof.}
+Rank(5): {name_ru: член-корреспондент, shortName_ru: ч-кмн., name_uk: член-кореспондент, shortName_uk: ч-кмн., name_en: associate member, shortName_en: A.M.}
+Rank(6): {name_ru: академик, shortName_ru: ак., name_uk: академік, shortName_uk: ак., name_en: academician, shortName_en: Ac.}
 
-Speciality(1): {name: Акушер}
-Speciality(2): {name: Аллерголог}
-Speciality(3): {name: Анестезиолог}
-Speciality(4): {name: Венеролог}
-Speciality(5): {name: Вирусолог}
-Speciality(6): {name: Гастроэнтеролог }
-Speciality(7): {name: Гинеколог }
-Speciality(8): {name: Дерматолог }
-Speciality(9): {name: Диетолог }
-Speciality(10): {name: Иммунолог }
-Speciality(11): {name: Кардиолог }
-Speciality(12): {name: Нарколог }
-Speciality(13): {name: Невролог }
-Speciality(14): {name: Окулист }
-Speciality(15): {name: Ортопед }
-Speciality(16): {name: Оториноларинголог }
-Speciality(17): {name: Патологоанатом }
-Speciality(18): {name: Педиатр }
-Speciality(19): {name: Проктолог }
-Speciality(20): {name: Психиатр }
-Speciality(21): {name: Пульмонолог }
-Speciality(22): {name: Реаниматолог }
-Speciality(23): {name: Ревматолог }
-Speciality(24): {name: Рентгенолог }
-Speciality(25): {name: Сексолог }
-Speciality(26): {name: Сексопатолог }
-Speciality(27): {name: Сомнолог }
-Speciality(28): {name: Стоматолог }
-Speciality(29): {name: Судмедэксперт }
-Speciality(30): {name: Терапевт }
-Speciality(31): {name: Токсиколог }
-Speciality(32): {name: Травматолог }
-Speciality(33): {name: Уролог }
-Speciality(34): {name: Фармаколог }
-Speciality(35): {name: Физиотерапевт }
-Speciality(36): {name: Хирург }
-Speciality(37): {name: Эметолог }
-Speciality(38): {name: Эндоскопист }
-Speciality(39): {name: Эпидемиолог}
+Speciality(1): {name_ru: Акушер, name_uk: Акушер, name_en: Obstetrician}
+Speciality(2): {name_ru: Аллерголог, name_uk: Алерголог, name_en: Allergist}
+Speciality(3): {name_ru: Анестезиолог, name_uk: Анестезіолог, name_en: Anesthesiologist}
+Speciality(4): {name_ru: Венеролог, name_uk: Венеролог, name_en: Venereal diseases}
+Speciality(5): {name_ru: Вирусолог, name_uk: Вірусолог, name_en: Virologist}
+Speciality(6): {name_ru: Гастроэнтеролог , name_uk: Гастроентеролог , name_en: Gastroenterologist }
+Speciality(7): {name_ru: Гинеколог , name_uk: Гінеколог , name_en: Gynecologist }
+Speciality(8): {name_ru: Дерматолог , name_uk: Дерматолог , name_en: Dermatologist }
+Speciality(9): {name_ru: Диетолог , name_uk: Дієтолог , name_en: Nutritionist }
+Speciality(10): {name_ru: Иммунолог , name_uk: Дієтолог , name_en: Immunologist }
+Speciality(11): {name_ru: Кардиолог , name_uk: Кардіолог , name_en: Cardiologist }
+Speciality(12): {name_ru: Нарколог , name_uk: Нарколог , name_en: Psychiatrist }
+Speciality(13): {name_ru: Невролог , name_uk: Невролог , name_en: Neurologist }
+Speciality(14): {name_ru: Окулист , name_uk: Окуліст , name_en: Oculist }
+Speciality(15): {name_ru: Ортопед , name_uk: Ортопед , name_en: Orthopedist }
+Speciality(16): {name_ru: Оториноларинголог , name_uk: Оториноларинголог , name_en: Otolaryngologist }
+Speciality(17): {name_ru: Патологоанатом , name_uk: Патологоанатом , name_en: Pathologist }
+Speciality(18): {name_ru: Педиатр , name_uk: Педіатр , name_en: Pediatrician }
+Speciality(19): {name_ru: Проктолог , name_uk: Проктолог , name_en: Proctologist }
+Speciality(20): {name_ru: Психиатр , name_uk: Психіатр , name_en: Psychiatrist }
+Speciality(21): {name_ru: Пульмонолог , name_uk: Пульмонолог , name_en: Pulmonologist }
+Speciality(22): {name_ru: Реаниматолог , name_uk: Реаніматолог , name_en: Resuscitator }
+Speciality(23): {name_ru: Ревматолог , name_uk: Ревматолог , name_en: Rheumatologist }
+Speciality(24): {name_ru: Рентгенолог , name_uk: Рентгенолог , name_en: Рентгенолог }
+Speciality(25): {name_ru: Сексолог , name_uk: Сексолог , name_en: Radiologist }
+Speciality(26): {name_ru: Сексопатолог , name_uk: Сексопатолог , name_en: Sexual pathologist }
+Speciality(27): {name_ru: Сомнолог , name_uk: Сомнолог , name_en: Somnology }
+Speciality(28): {name_ru: Стоматолог , name_uk: Стоматолог , name_en: Dentist }
+Speciality(29): {name_ru: Судмедэксперт , name_uk: Судмедэксперт , name_en: Forensic scientist }
+Speciality(30): {name_ru: Терапевт , name_uk: Терапевт , name_en: Therapist }
+Speciality(31): {name_ru: Токсиколог , name_uk: Токсиколог , name_en: Therapist }
+Speciality(32): {name_ru: Травматолог , name_uk: Травматолог , name_en: Traumatologist }
+Speciality(33): {name_ru: Уролог , name_uk: Уролог , name_en: Urologist }
+Speciality(34): {name_ru: Фармаколог , name_uk: Фармаколог , name_en: Physiotherapist }
+Speciality(35): {name_ru: Физиотерапевт , name_uk: Фізіотерапевт , name_en: Physiotherapist }
+Speciality(36): {name_ru: Хирург , name_uk: Хирург , name_en: Surgeon }
+Speciality(37): {name_ru: Эметолог , name_uk: Эметолог , name_en: Emetolog }
+Speciality(38): {name_ru: Эндоскопист , name_uk: Эндоскопист , name_en: Endoscopist }
+Speciality(39): {name_ru: Эпидемиолог, name_uk: Эпидемиолог, name_en: Epidemiologist}
 
-Country(1): {name: Украина}
+Country(1): {name_ru: Украина, name_uk: Україна,  name_en: Ukraine  }
 
-Region(1): {name: Украина}
+Region(2): {country: 1, name_ru: Ивано-Франковская, name_uk: Івано-Франківська, name_en: Ivano-Frankivsk}
+Region(3): {country: 1, name_ru: Киевская, name_uk: Київська, name_en: Kyiv}
+Region(5): {country: 1, name_ru: Тернопольская, name_uk: Тернопільська, name_en: Ternopol}
+Region(6): {country: 1, name_ru: Черниговская, name_uk: Чернігівська, name_en: Chernigov}
+Region(7): {country: 1, name_ru: Закарпатская, name_uk: Закарпатська, name_en: Transcarpathian}
+Region(8): {country: 1, name_ru: Черкасская, name_uk: Черкаська, name_en: Cherkasy}
+Region(9): {country: 1, name_ru: Черновицкая, name_uk: Чернівецька, name_en: Chernivtsi}
+Region(10): {country: 1, name_ru: Кировоградская, name_uk: Кіровоградська, name_en: Kirovohrad}
+Region(11): {country: 1, name_ru: Николаевская, name_uk: Миколаївська, name_en: Mykolaiv}
+Region(12): {country: 1, name_ru: Луганская, name_uk: Луганська, name_en: Lugansk}
+Region(13): {country: 1, name_ru: Сумская, name_uk: Сумська, name_en: Sumy}
+Region(14): {country: 1, name_ru: Запорожская, name_uk: Запорізька, name_en: Zaporozhye}
+Region(15): {country: 1, name_ru: Крымская, name_uk: Кримська, name_en: Crimean}
+Region(16): {country: 1, name_ru: Винницкая, name_uk: Вінницька, name_en: Vinnitsa}
+Region(17): {country: 1, name_ru: Херсонская, name_uk: Херсонська, name_en: Kherson}
+Region(19): {country: 1, name_ru: Днепропетровская, name_uk: Дніпропетровська, name_en: Dnipropetrovsk}
+Region(20): {country: 1, name_ru: Донецкая, name_uk: Донецька, name_en: Donetsk}
+Region(21): {country: 1, name_ru: Одесская, name_uk: Одеська, name_en: Odessa}
+Region(22): {country: 1, name_ru: Хмельницкая, name_uk: Хмельницька, name_en: Khmelnitsky}
+Region(23): {country: 1, name_ru: Житомирская, name_uk: Житомирська, name_en: Zhytomyr}
+Region(24): {country: 1, name_ru: Ровенская, name_uk: Рівненська, name_en: Rivne}
+Region(25): {country: 1, name_ru: Львовская, name_uk: Львівська, name_en: L'viv}
+Region(26): {country: 1, name_ru: Волынская, name_uk: Волинська, name_en: Volyn}
+Region(27): {country: 1, name_ru: Харьковская, name_uk: Харківська, name_en: Kharkiv}
+Region(28): {country: 1, name_ru: Полтавская, name_uk: Полтавська, name_en: Poltava}
 
-Patient(1):  {name: Петров Пациент Петрович, sex: M, birthday: 1970-01-01, country: 1 ,region: 1, zipCode: 03115, city: Киев, address: 'ул.Иванова, 10, 10', address: , isCity: Yes, status: 0}
-Patient(2):  {name: Иванов Пациент Иванович, sex: M, birthday: 1975-02-01, country: 1 ,region: 1, zipCode: 03115, city: Киев, address: 'ул.Петрова, 10, 10',address: , isCity: Yes, status: 0}
-Patient(3):  {name: Сидорова Клава Захаровна, sex: F, birthday: 1980-03-01, country: 1 ,region: 1, zipCode: 07832, city: Киев, address: 'ул.Задворная, 1', address: , isCity: Yes, status: 0}
+City(18): {region: 3, name_ru: Киев, name_uk: Київ, name_en: Kyiv}
+City(30): {region: 10, name_ru: Александрия, name_uk: Олександрія, name_en: Alexandria}
+City(31): {region: 10, name_ru: Александровка, name_uk: Олександрівка, name_en: Aleksandrovka}
+City(32): {region: 15, name_ru: Алушта, name_uk: Алушта, name_en: Alushta}
+City(33): {region: 12, name_ru: Алчевск, name_uk: Алчевськ, name_en: Alchevsk}
+City(34): {region: 23, name_ru: Андрушовка, name_uk: Андрушівка, name_en: Andrushivka}
+City(35): {region: 15, name_ru: Армянск, name_uk: Армянськ, name_en: Armyansk}
+City(36): {region: 21, name_ru: Арциз, name_uk: Арциз, name_en: Artsiz}
+City(37): {region: 17, name_ru: Аскания-Нова, name_uk: Асканія-Нова, name_en: Askania Nova}
+City(38): {region: 13, name_ru: Ахтырка, name_uk: Охтирка, name_en: Akhtyrka}
+City(39): {region: 16, name_ru: Бар, name_uk: Бар, name_en: Bar}
+City(40): {region: 3, name_ru: Барышевка, name_uk: Баришівка, name_en: Baryshevka}
+City(41): {region: 6, name_ru: Бахмач, name_uk: Бахмач, name_en: Bakhmach}
+City(42): {region: 3, name_ru: Белая Церковь, name_uk: Біла Церква, name_en: White Church}
+City(45): {region: 21, name_ru: Белгород-Днестровский, name_uk: Білгород-Дністровський, name_en: Odesa}
+City(46): {region: 13, name_ru: Белополье, name_uk: Білопілля, name_en: Belopole}
+City(48): {region: 23, name_ru: Бердичев, name_uk: Бердичів, name_en: Berdichev}
+City(49): {region: 14, name_ru: Бердянск, name_uk: Бердянськ, name_en: Berdyansk}
+City(50): {region: 7, name_ru: Берегово, name_uk: Берегово, name_en: Beregovo}
+City(51): {region: 5, name_ru: Бережаны, name_uk: Бережани, name_en: Berezhany}
+City(52): {region: 3, name_ru: Березань, name_uk: Березань, name_en: Berezan}
+City(54): {region: 6, name_ru: Бобровица, name_uk: Бобровиця, name_en: Bobrovitsa}
+City(55): {region: 25, name_ru: Борислав, name_uk: Борислав, name_en: Borislav}
+City(56): {region: 3, name_ru: Борисполь, name_uk: Бориспіль, name_en: Borispol}
+City(58): {region: 3, name_ru: Бородянка, name_uk: Бородянка, name_en: Borodyanka}
+City(59): {region: 3, name_ru: Боярка, name_uk: Боярка, name_en: Boyarka}
+City(60): {region: 3, name_ru: Бровары, name_uk: Бровари, name_en: Brovary}
+City(62): {region: 3, name_ru: Буча, name_uk: Буча, name_en: Butch}
+City(63): {region: 6, name_ru: Варва, name_uk: Варва, name_en: Varva}
+City(64): {region: 3, name_ru: Васильков, name_uk: Васильків, name_en: Vasilkov}
+City(65): {region: 9, name_ru: Вижница, name_uk: Вижниця, name_en: Vizhnitsa}
+City(67): {region: 16, name_ru: Винница, name_uk: Вінниця, name_en: Vinnytsia}
+City(69): {region: 3, name_ru: Вишневое, name_uk: Вишневе, name_en: cherry}
+City(71): {region: 3, name_ru: Вишневый, name_uk: Вишневий, name_en: Cherry}
+City(72): {region: 11, name_ru: Вознесенск, name_uk: Вознесенськ, name_en: Voznesensk}
+City(73): {region: 23, name_ru: Володарск-Волынский, name_uk: Володарськ-Волинський, name_en: Volodarsk Volynskyy}
+City(74): {region: 3, name_ru: Володимир, name_uk: Володимир, name_en: Volodymyr}
+City(75): {region: 3, name_ru: Вышгород, name_uk: Вишгород, name_en: Vyshgorod}
+City(78): {region: 2, name_ru: Тлумач, name_uk: Тлумач, name_en: Tlumach}
+City(80): {region: 17, name_ru: Геническ, name_uk: Генічеськ, name_en: Genichesk}
+City(82): {region: 13, name_ru: Глухов, name_uk: Глухов, name_en: Glukhov}
+City(83): {region: 20, name_ru: Горловка, name_uk: Горловка, name_en: Gorlovka}
+City(84): {region: 3, name_ru: Городище, name_uk: Городище, name_en: Settlement}
+City(85): {region: 6, name_ru: Городня, name_uk: Городня, name_en: Gorodnya}
+City(86): {region: 24, name_ru: Гостополь, name_uk: Гостополь, name_en: Gostopol}
+City(87): {region: 28, name_ru: Гребенка, name_uk: Гребінка, name_en: Comb}
+City(89): {region: 22, name_ru: Деражня, name_uk: Деражня, name_en: Derazhnya}
+City(90): {region: 6, name_ru: Десна, name_uk: Десна, name_en: Gums}
+City(91): {region: 15, name_ru: Джанкой, name_uk: Джанкой, name_en: Dzhankoy}
+City(92): {region: 19, name_ru: Днепродзержинск, name_uk: Дніпродзержинськ, name_en: Dniprodzerzhynsk}
+City(94): {region: 19, name_ru: Днепропетровск, name_uk: Дніпропетровськ, name_en: Dnipropetrovs`k}
+City(95): {region: 14, name_ru: Днепрорудный, name_uk: Дніпрорудний, name_en: Dneprorudnoe}
+City(97): {region: 2, name_ru: Долина, name_uk: Долина, name_en: Valley}
+City(98): {region: 20, name_ru: Донецк, name_uk: Донецьк, name_en: Donets`k}
+City(100): {region: 2, name_ru: Дрогобыч, name_uk: Дрогобич, name_en: Drogobych}
+City(101): {region: 25, name_ru: Дрогобыч, name_uk: Дрогобич, name_en: Drogobych}
+City(102): {region: 20, name_ru: Дружковка, name_uk: Дружківка, name_en: Druzhkovka}
+City(103): {region: 24, name_ru: Дубно, name_uk: Дубно, name_en: Dubno}
+City(104): {region: 13, name_ru: Дубовязовка, name_uk: Дубов'язівка, name_en: Dubovyazovka}
+City(105): {region: 22, name_ru: Дунаевцы, name_uk: Дунаївці, name_en: Dunaevcy}
+City(106): {region: 15, name_ru: Евпатория, name_uk: Євпаторія, name_en: Yevpatoriya}
+City(107): {region: 19, name_ru: Желтые Воды, name_uk: Жовті Води, name_en: Yellow Waters}
+City(108): {region: 23, name_ru: Житомир, name_uk: Житомир, name_en: Zhytomyr}
+City(109): {region: 16, name_ru: Жмеринка, name_uk: Жмеринка, name_en: Zhmerynka}
+City(111): {region: 14, name_ru: Запорожье, name_uk: Запоріжжя, name_en: Zaporozhye}
+City(112): {region: 5, name_ru: Збараж, name_uk: Збараж, name_en: Zbarazh}
+City(113): {region: 3, name_ru: Згуровка, name_uk: Згурівка, name_en: Zgurovka}
+City(114): {region: 8, name_ru: Золотоноша, name_uk: Золотоноша, name_en: Zolotonosha}
+City(115): {region: 3, name_ru: Иванков, name_uk: Іванків, name_en: Ivankov}
+City(118): {region: 2, name_ru: Ивано-Франковск, name_uk: Івано-Франківськ, name_en: Ivano-Frankivsk}
+City(119): {region: 21, name_ru: Измаил, name_uk: Ізмаїл, name_en: Izmail}
+City(120): {region: 22, name_ru: Изяслав, name_uk: Ізяслав, name_en: Izyaslav}
+City(122): {region: 16, name_ru: Ильинцы, name_uk: Іллінці, name_en: Ilintsi}
+City(123): {region: 3, name_ru: Ирпень, name_uk: Ірпінь, name_en: Irpen}
+City(124): {region: 23, name_ru: Иршанск, name_uk: Іршанськ, name_en: Irshansk}
+City(125): {region: 8, name_ru: Ичня, name_uk: Ічня, name_en: Ichnya}
+City(127): {region: 3, name_ru: Кагарлык, name_uk: Кагарлик, name_en: Kagarlyk}
+City(128): {region: 16, name_ru: Казатин, name_uk: Козятин, name_en: Kazatin}
+City(132): {region: 2, name_ru: Калуш, name_uk: Калуш, name_en: Kalush}
+City(133): {region: 22, name_ru: Каменец-Подольский, name_uk: Кам'янець-Подільський, name_en: Kamenets}
+City(134): {region: 8, name_ru: Канев, name_uk: Канів, name_en: Kanev}
+City(135): {region: 17, name_ru: Каховка, name_uk: Каховка, name_en: Kakhovka}
+City(136): {region: 15, name_ru: Керчь, name_uk: Керч, name_en: Kerch}
+City(144): {region: 10, name_ru: Кировоград, name_uk: Кіровоград, name_en: Kirovohrad}
+City(145): {region: 20, name_ru: Кировское, name_uk: Кіровське, name_en: Kirov}
+City(149): {region: 26, name_ru: Ковель, name_uk: Ковель, name_en: Kovel}
+City(150): {region: 21, name_ru: Кодыма, name_uk: Кодима, name_en: Kodyma}
+City(151): {region: 3, name_ru: Кожуховка, name_uk: Кожухівка, name_en: Kozhuhovka}
+City(153): {region: 6, name_ru: Козелец, name_uk: Козелець, name_en: Kozelets}
+City(156): {region: 2, name_ru: Коломыя, name_uk: Коломия, name_en: Kolomyya}
+City(158): {region: 28, name_ru: Комсомольск, name_uk: Комсомольськ, name_en: Komsomolsk}
+City(159): {region: 13, name_ru: Конотоп, name_uk: Конотоп, name_en: Konotop}
+City(161): {region: 23, name_ru: Коростень, name_uk: Коростень, name_en: Korosten}
+City(163): {region: 8, name_ru: Корсунь-Шевченковский, name_uk: Корсунь-Шевченківський, name_en: Korsun-Shevchenko}
+City(164): {region: 6, name_ru: Корюковка, name_uk: Корюківка, name_en: Koryukovka}
+City(165): {region: 2, name_ru: Косoв, name_uk: Косoв, name_en: Kosov}
+City(166): {region: 21, name_ru: Котовск, name_uk: Котовськ, name_en: Kotovsk}
+City(167): {region: 20, name_ru: Краматорск, name_uk: Краматорськ, name_en: Kramatorsk}
+City(168): {region: 22, name_ru: Красилов, name_uk: Красилів, name_en: Krasilov}
+City(169): {region: 20, name_ru: Красноармейск, name_uk: Красноармійськ, name_en: Krasnoarmejsk}
+City(170): {region: 15, name_ru: Красногвардейское, name_uk: Красногвардійське, name_en: Krasnogvardiyske}
+City(171): {region: 12, name_ru: Краснодон, name_uk: Краснодон, name_en: Krasnodon}
+City(172): {region: 13, name_ru: Краснополье, name_uk: Краснопілля, name_en: Krasnopole}
+City(173): {region: 12, name_ru: Красный Луч, name_uk: Червоний Луч, name_en: Red Ray}
+City(174): {region: 3, name_ru: Красятичи, name_uk: Красятичі, name_en: Krasyatichi}
+City(177): {region: 5, name_ru: Кременец, name_uk: Кременець, name_en: Kremenets}
+City(182): {region: 28, name_ru: Кременчуг, name_uk: Кременчук, name_en: Kremenchug}
+City(184): {region: 19, name_ru: Кривой Рог, name_uk: Кривий Ріг, name_en: Krivyi Rih}
+City(185): {region: 16, name_ru: Ладыжин, name_uk: Ладижин, name_en: Ladyzhin}
+City(186): {region: 13, name_ru: Лебедин, name_uk: Лебедин, name_en: Lebedin}
+City(187): {region: 12, name_ru: Лисичанск, name_uk: Лисичанськ, name_en: Lisichansk}
+City(188): {region: 28, name_ru: Лубны, name_uk: Лубни, name_en: Lubny}
+City(189): {region: 12, name_ru: Луганск, name_uk: Луганськ, name_en: Luhans`k}
+City(193): {region: 26, name_ru: Луцк, name_uk: Луцьк, name_en: Luts`k}
+City(195): {region: 25, name_ru: Львов, name_uk: Львів, name_en: L'viv}
+City(196): {region: 3, name_ru: Макаров, name_uk: Макаров, name_en: Makarov}
+City(202): {region: 23, name_ru: Малин, name_uk: Малин, name_en: Malin}
+City(203): {region: 8, name_ru: Маньковка, name_uk: Маньківка, name_en: Mankovka}
+City(205): {region: 20, name_ru: Мариуполь, name_uk: Маріуполь, name_en: Mariupol}
+City(206): {region: 14, name_ru: Мелитополь, name_uk: Мелітополь, name_en: Melitopol}
+City(209): {region: 6, name_ru: Мена, name_uk: Мена, name_en: Mena}
+City(210): {region: 28, name_ru: Миргород, name_uk: Миргород, name_en: Myrhorod}
+City(211): {region: 3, name_ru: Мироновка, name_uk: Миронівка, name_en: Mironovka}
+City(212): {region: 16, name_ru: Могилев-Подольский, name_uk: Могилів-Подільський, name_en: Mogilev-Podolsky}
+City(213): {region: 7, name_ru: Мукачево, name_uk: Мукачево, name_en: Mukachevo}
+City(214): {region: 2, name_ru: Надвирна, name_uk: Надвірна, name_en: Nadvirna}
+City(215): {region: 6, name_ru: Нежин, name_uk: Ніжин, name_en: Nizhyn}
+City(218): {region: 3, name_ru: Немешаево, name_uk: Немішаєве, name_en: Nemeshaevo}
+City(219): {region: 22, name_ru: Нетешин, name_uk: Нетішин, name_en: Neteshin}
+City(221): {region: 11, name_ru: Николаев, name_uk: Миколаїв, name_en: Mykolaiv}
+City(223): {region: 19, name_ru: Никополь, name_uk: Нікополь, name_en: Nikopol}
+City(224): {region: 17, name_ru: Новая Каховка, name_uk: Нова Каховка, name_en: New Kakhovka}
+City(226): {region: 26, name_ru: Нововолынск, name_uk: Нововолинськ, name_en: Novovolynsk}
+City(227): {region: 23, name_ru: Новоград-Волынский, name_uk: Новоград-Волинський, name_en: Novograd Volyn}
+City(228): {region: 12, name_ru: Новопсков, name_uk: Новопсков, name_en: Novopskov}
+City(229): {region: 25, name_ru: Новый Раздол, name_uk: Новий Розділ, name_en: New Razdol}
+City(230): {region: 6, name_ru: Носовка, name_uk: Носівка, name_en: Nosovka}
+City(231): {region: 3, name_ru: Обухов, name_uk: Обухів, name_en: Obukhov}
+City(232): {region: 21, name_ru: Одесса, name_uk: Одеса, name_en: Odessa}
+City(233): {region: 6, name_ru: Остер, name_uk: Остер, name_en: Oster}
+City(235): {region: 13, name_ru: Охтырка, name_uk: Охтирка, name_en: Ohtyrka}
+City(237): {region: 19, name_ru: Павлоград, name_uk: Павлоград, name_en: Pavlograd}
+City(238): {region: 7, name_ru: Буштыно, name_uk: Буштино, name_en: Bushtyno}
+City(240): {region: 27, name_ru: Малая Даниловка, name_uk: Мала Данилівка, name_en: Little Danilovka}
+City(241): {region: 16, name_ru: Теплик, name_uk: Теплик, name_en: Teplik}
+City(242): {region: 11, name_ru: Первомайск, name_uk: Первомайськ, name_en: Pervomaisk}
+City(245): {region: 3, name_ru: Переяслав-Хмельницкий, name_uk: Переяслав-Хмельницький, name_en: Pereyaslav-Khmelnytsky}
+City(246): {region: 13, name_ru: Петропавловск-Камчатский, name_uk: Петропавловськ-Камчатський, name_en: Petropavlovsk-Kamchatsky}
+City(247): {region: 3, name_ru: Пирново, name_uk: Пірново, name_en: Pirnovo}
+City(248): {region: 28, name_ru: Пирятин, name_uk: Пирятин, name_en: Piryatin}
+City(249): {region: 5, name_ru: Пидволочиськ, name_uk: Підволочіськ, name_en: Pidvolochisk}
+City(250): {region: 3, name_ru: Полесское, name_uk: Поліське, name_en: Poliske}
+City(252): {region: 28, name_ru: Полтава, name_uk: Полтава, name_en: Poltava}
+City(253): {region: 23, name_ru: Попельня, name_uk: Попельня, name_en: Popelnya}
+City(256): {region: 6, name_ru: Прилуки, name_uk: Прилуки, name_en: Priluki}
+City(258): {region: 23, name_ru: Радомышль, name_uk: Радомишль, name_en: Radomyshl}
+City(259): {region: 3, name_ru: Радынка, name_uk: Радинка, name_en: Radynka}
+City(260): {region: 3, name_ru: Ракитное, name_uk: Рокитне, name_en: Rakitnoe}
+City(262): {region: 21, name_ru: Рени, name_uk: Рені, name_en: Renee}
+City(264): {region: 12, name_ru: Ровеньки, name_uk: Ровеньки, name_en: Rovenky}
+City(266): {region: 24, name_ru: Ровно, name_uk: Рівне, name_en: Rivne}
+City(267): {region: 13, name_ru: Ромны, name_uk: Ромни, name_en: Romny}
+City(269): {region: 12, name_ru: Рубежное, name_uk: Рубіжне, name_en: Rubezhnoe}
+City(271): {region: 8, name_ru: Иваньки, name_uk: Іваньки, name_en: Ivanko}
+City(274): {region: 28, name_ru: Оболонь, name_uk: Оболонь, name_en: Obolon}
+City(275): {region: 3, name_ru: Русанов, name_uk: Русанов, name_en: Rusanov}
+City(276): {region: 3, name_ru: Стещено, name_uk: Стещено, name_en: Stescheno}
+City(277): {region: 3, name_ru: Чубинское, name_uk: Чубинське, name_en: Chubinskoe}
+City(278): {region: 15, name_ru: Саки, name_uk: Саки, name_en: Saki}
+City(279): {region: 7, name_ru: Свалява, name_uk: Свалява, name_en: Svalyava}
+City(280): {region: 12, name_ru: Свердловск, name_uk: Свердловськ, name_en: Sverdlovsk}
+City(281): {region: 10, name_ru: Светловодск, name_uk: Світловодськ, name_en: Svetlovodsk}
+City(283): {region: 15, name_ru: Севастополь, name_uk: Севастополь, name_en: Sevastopol}
+City(285): {region: 12, name_ru: Северодонецк, name_uk: Сєвєродонецьк, name_en: Severodonetsk}
+City(288): {region: 15, name_ru: Симферополь, name_uk: Сімферополь, name_en: Simferopol}
+City(289): {region: 17, name_ru: Скадовск, name_uk: Скадовськ, name_en: Skadovsk}
+City(290): {region: 3, name_ru: Сквира, name_uk: Сквира, name_en: Skvira}
+City(291): {region: 22, name_ru: Славута, name_uk: Славута, name_en: Slavuta}
+City(294): {region: 3, name_ru: Славутич, name_uk: Славутич, name_en: Slavutich}
+City(296): {region: 20, name_ru: Славянск, name_uk: Слов'янськ, name_en: Slov`yans`k}
+City(297): {region: 8, name_ru: Смела, name_uk: Сміла, name_en: Smela}
+City(298): {region: 25, name_ru: Сокаль, name_uk: Сокаль, name_en: SOKAL}
+City(300): {region: 3, name_ru: Ставыще, name_uk: Ставище, name_en: Stavysche}
+City(303): {region: 22, name_ru: Староконстантиновск, name_uk: Старокостянтинівський, name_en: Starokonstantinovsk}
+City(304): {region: 25, name_ru: Стрий, name_uk: Стрий, name_en: Striy}
+City(307): {region: 13, name_ru: Сумы, name_uk: Суми, name_en: Sumy}
+City(308): {region: 3, name_ru: Тараща, name_uk: Тараща, name_en: Tarashcha}
+City(309): {region: 5, name_ru: Тернополь, name_uk: Тернопіль, name_en: Ternopil}
+City(310): {region: 3, name_ru: Тетиев, name_uk: Тетіїв, name_en: Tetiev}
+City(312): {region: 13, name_ru: Тростянец, name_uk: Тростянець, name_en: Trostyanets}
+City(314): {region: 7, name_ru: Тячев, name_uk: Тячів, name_en: Tyachev}
+City(315): {region: 7, name_ru: Ужгород, name_uk: Ужгород, name_en: Uzhhorod}
+City(316): {region: 3, name_ru: Узин, name_uk: Узин, name_en: Uzin}
+City(317): {region: 3, name_ru: Украинка, name_uk: Українка, name_en: Ukrainka}
+City(318): {region: 8, name_ru: Умань, name_uk: Умань, name_en: Uman}
+City(319): {region: 3, name_ru: Фастов, name_uk: Фастів, name_en: Fastow}
+City(320): {region: 15, name_ru: Феодосия, name_uk: Феодосія, name_en: Feodosiya}
+City(322): {region: 20, name_ru: Харцизск, name_uk: Харцизськ, name_en: Hartsizsk}
+City(323): {region: 27, name_ru: Харьков, name_uk: Харків, name_en: Kharkiv}
+ 
 
-LPZ(1): {name: ЦТМ,country: 1 ,region: 1, zipCode: 03115, city: Киев, address: 'ул.Иванова, 10, 10', address: 'ул.Петрова, 10, 11', level: 1, type: 1, boss: Осташко Виталий Геннадиевич, zkpo: 1234567890, tel: 0441111111  }
+Patient(1):  {name: Петров Пациент Петрович, sex: M, birthday: 1970-01-01, country: 1, city: 18, zipCode: 03115, city: Киев, address: 'ул.Иванова, 10, 10', address: , isCity: Yes, status: 0}
+Patient(2):  {name: Иванов Пациент Иванович, sex: M, birthday: 1975-02-01, country: 1, city: 18, zipCode: 03115, city: Киев, address: 'ул.Петрова, 10, 10',address: , isCity: Yes, status: 0}
+Patient(3):  {name: Сидорова Клава Захаровна, sex: F, birthday: 1980-03-01, country: 1, city: 18, zipCode: 07832, city: Киев, address: 'ул.Задворная, 1', address: , isCity: Yes, status: 0}
 
-User(1): {name: Петров Пользователь Петрович, email: user@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1980-01-01}
-User(2): {name: Акушер Ольга Специалист, email: advisor1@lpz-1.com, rank: 1, lpz: 1, advisor: 1, password: test, sex: F , birthday: 1970-01-01}
-User(3): {name: Айболит Иван Специалист, email: advisor2@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
-User(4): {name: Фрейд Зигмунд Специалист, email: advisor3@lpz-1.com, rank: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
+Lpz(1): {name: ЦТМ,country: 1 ,city: 18, zipCode: 03115,  address: 'ул.Иванова, 10, 10', address: 'ул.Петрова, 10, 11', level: 1, type: 1, boss: Осташко Виталий Геннадиевич, zkpo: 1234567890, tel: 0441111111  }
+
+User(1): {name: Петров Пользователь Петрович, email: user@lpz-1.com, rank: 1, speciality: 1, advisor: 0, password: test, sex: M , birthday: 1980-01-01}
+User(2): {name: Акушер Ольга Специалист, email: advisor1@lpz-1.com, rank: 1,  speciality: 1, lpz: 1, advisor: 1, password: test, sex: F , birthday: 1970-01-01}
+User(3): {name: Айболит Иван Специалист, email: advisor2@lpz-1.com, rank: 1, speciality: 1,  advisor: 0, password: test, sex: M , birthday: 1970-01-01}
+User(4): {name: Фрейд Зигмунд Специалист, email: advisor3@lpz-1.com, rank: 1,  speciality: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
 
 Advisor(1): {user: 2, speciality: 1, rank: 1, level: 1, type: 1}
 

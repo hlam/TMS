@@ -7,5 +7,5 @@ import play.*;
 import java.util.*;
 
 
-@CRUD.For(models.LPZ.class)
-public class LPZ extends CRUD  {}
+@CRUD.For(models.SomeText.class)
+public class SomeText extends CRUD  {}

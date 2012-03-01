@@ -28,14 +28,14 @@ public class AdvisorList {
 			item.id = q.user.id;
 			item.name = q.user.name;
 			if( q.user.rank!=null)
-			item.rank = q.user.rank.name;
+			item.rank = q.user.rank.getName();
 			if( q.user.lpz!=null){
 				item.lpzName = q.user.lpz.name;
-				item.lpzCity = q.user.lpz.city;
+				item.lpzCity = q.user.lpz.city.getName();
 			}
 			item.level = q.level;
 			item.type = q.type;
-			item.speciality = q.speciality.name;
+			item.speciality = q.speciality.getName();
 			
 			ret.add(item);
 		}

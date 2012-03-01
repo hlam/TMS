@@ -3,4 +3,5 @@
 require:
     - play
     - play -> crud
-    
+    - play -> messages
+	- play -> greenscript

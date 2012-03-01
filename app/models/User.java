@@ -13,7 +13,7 @@ import java.util.*;
 public class User extends Model {
 	@Required()
 	@ManyToOne
-	public LPZ lpz;
+	public Lpz lpz;
 	@Required()
 	public String name;
 	@Required()
@@ -23,6 +23,11 @@ public class User extends Model {
 	@Required()
 	@ManyToOne
 	public Rank rank;
+	
+	@Required
+	@ManyToOne
+	public Speciality speciality;
+	
 	@Required()
 	public boolean advisor=true;
 	
@@ -34,7 +39,6 @@ public class User extends Model {
 	@MaxSize(1)
 	public String sex;
 	@Required()
-    @As("dd.MM.yy")
 	public Date birthday;
 
     public String toString() {

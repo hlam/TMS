@@ -1,0 +1,57 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+site.title=Ukraine Telemedical System
+site.your_login = Your login
+site.your_password = Your password
+site.singin = Sing in
+site.language = Language
+site.login_error = <p> <span> Invalid username/password </span> (<a title="Forgot your password?" href="/forgotpassword"> Forgot your password? </a>) </p> <p> Check the input it seems to us that something is wrong. </p> <p> you are not yet on the site? <a href="/registartion">Register</a>. </p>
+site.agreement = User Agreement
+site.how_it_work = How does it work?
+site.contacts = Contact
+site.registration = Register
+site.parters = Our partners
+site.help = Help
+site.site_map = Site Map
+site.blog = Our blog
+site.singup_as = %s
+
+site.select = Select ...
+site.region = Area
+site.city = City
+site.organisation = Organization
+site.name = Name
+site.zipcode = Zip
+site.address = Address
+site.zkpo = GCEO
+site.tel = Phone
+
+site.user = User
+site.rank = Rank
+site.speciality = Specialty
+site.fio = Name
+site.sex = Sex
+site.sex_m = Male
+site.sex_f = Females
+site.birthday = Birthday(%s)
+site.password = Password
+site.verify_password = Verify password
+site.type_code=Please type the code below
+site.have_create_lpz = Organization is not in the list. Create a new one?
+site.send_password = Lost password
+site.password_sended = password sent by email
+
+site.send = Submit
+site.cancel = Cancel
+
+
+validation.req_code = Please type the code
+validation.minSize=Length must be longer than %d
+validation.invalid_captche = Invalid code. Please type it again
+validation.password_nomatch = Passwords do not match 
+validation.user_exist = User already exists
+validation.user_not_exist = User does not exist
+
+mail.welcome = Welcome to %s
+mail.sendpassword = Your password

@@ -1,98 +1,248 @@
+
+
 #{extends 'main.html' /}
-#{set title:'Регистрция консультанта' /}
+#{set 'title'}&{'site.registration'} - #{/set}
 #{set 'moreStyles'}
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/ui-lightness/jquery-ui-1.8.17.custom.css'}">
 #{/set}
 #{set 'moreScripts'}
         <script src="@{'/public/javascripts/jquery-ui-1.8.17.custom.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{if lang=="ru"}
         <script src="@{'/public/javascripts/i18n/jquery.ui.datepicker-ru.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{/if}
+        #{if lang=="uk"}
+        <script src="@{'/public/javascripts/i18n/jquery.ui.datepicker-uk.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{/if}
+        <script src="@{'/public/javascripts/jquery.validate.js'}" type="text/javascript" charset="${_response_encoding}"></script>
 #{/set}
-<h1>Регистрация консультанта</h1>
-#{form @registerUser()}
-    #{field 'user.lpz.id'}
-        <p class="${field.errorClass}">
-            <strong>Организация:</strong> 
-            <select  name="${field.name}">
-         		<option value="">Выберите...</option>
-				#{list items:lpz_list, as:'item'}
-         		<option #{if user?.lpz?.id==item.id}selected#{/if} value="${item.id}">${item.name}</option>
-				#{/list}
-			</select>
-             *
-            <span class="error">${field.error}</span>
-        </p>
-    #{/field}
-    #{field 'user.rank.id'}
-        <p class="${field.errorClass}">
-            <strong>Звание:</strong> 
-            <select name="${field.name}" >
-         		<option  value="">Выберите...</option>
-				#{list items:rank_list, as:'item'}
-         		<option #{if user?.rank?.id==item.id}selected#{/if}  value="${item.id}">${item.name}</option>
-				#{/list}
-			</select>
-             *
-            <span class="error">${field.error}</span>
-        </p>
-    #{/field}
-    
-    #{field 'speciality_id'}
-        <p class="${field.errorClass}">
-            <strong>Специальность:</strong>
-             <select name="${field.name}" >
-         		<option  value="">Выберите...</option>
-				#{list items:speciality_list, as:'item'}
-         		<option #{if speciality_id==item.id}selected#{/if}  value="${item.id}">${item.name}</option>
-				#{/list}
-			</select>
-             *
-            <span class="error">${field.error}</span>
-        </p>
+<h1>&{'site.registration'}</h1>
+
+<script type="text/javascript">
+	$(function() {
+
+		var v = $("#form").validate({
+				errorElement: "span",
+				rules:{
+					region_id: {required: true}
+					,"lpz.city.id": {required: true}
+					,lpz_id: {required: "#new_lpz:!checked"}
+					,"lpz.name": {required: "#new_lpz:checked"}
+					,"lpz.zipCode": {required: "#new_lpz:checked"}
+					,"lpz.address": {required: "#new_lpz:checked"}
+		
+					,rank_id: {required: true}
+					,speciality_id: {required: true}
+					,name: {required: true}
+					,password: {required: true, minlength:4}
+					,verifyPassword: {required: true, equalTo:"#password"}
+					,email: {required: true, email: true, remote:"/validate/email"}
+					,sex: {required: true}
+					,birthday: {required: true}
+					,code: {required: true, remote:"/validate/code?randomID=${randomID}"}
+					
+				},
+				messages:{
+					region_id: {required: "&{'validation.required'}"}
+					, "lpz.city.id": {required: "&{'validation.required'}"}
+					, lpz_id: {required: "&{'validation.required'}"}
+					, "lpz.name": {required: "&{'validation.required'}"}
+					, "lpz.zipCode": {required: "&{'validation.required'}"}
+					, "lpz.address": {required: "&{'validation.required'}"}
+
+					, rank_id: {required: "&{'validation.required'}"}
+					, speciality_id: {required: "&{'validation.required'}"}
+					, name: {required: "&{'validation.required'}"}
+					, password: {required: "&{'validation.required'}", minlength: "&{'validation.minSize', 4}"}
+					, verifyPassword: {required: "&{'validation.required'}", equalTo: "&{'validation.password_nomatch'}"}
+					,email: {required: "&{'validation.required'}", email: "&{'validation.email'}", remote: "&{'validation.user_exist'}"}
+					, sex: {required: "&{'validation.required'}"}
+					, birthday: {required: "&{'validation.required'}"}
+					, code: {required: "&{'validation.required'}", remote: "&{'validation.invalid_captche'}"}
+			}
+				});
+	});
+
+</script>
+#{i18n keys:['site.select']/}
+#{form @registerUser(), id:"form"}
+    <fieldset>              
+        <legend>&{'site.organisation'}</legend>  
+        #{field 'region_id'}
+        <div class="field">         
+            <label for="lpz_region">&{'site.region'}: </label>
+            #{select field.name, items:region_list, valueProperty:'id', labelProperty:'name', value:region_id,  id:"lpz_region" }
+              #{option ''}&{'site.select'}#{/option}
+            #{/select}  
+            
+            <span class="req">*</span>
+            <span class="error" for="lpz_region" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        
+        #{field 'lpz.city.id'}
+        <div class="field">         
+            <label for="lpz_city">&{'site.city'}: </label>
+            #{select field.name, items:city_list, valueProperty:'id', labelProperty:'name', value:lpz?.city?.id,  id:"lpz_city" }
+              #{option ''}&{'site.select'}#{/option}
+            #{/select}  
+            <span class="req">*</span>
+            <span class="error" for="lpz_city" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'lpz_id'}
+        <div class="field" id="lpz_select" style="${new_lpz ? 'display:none':''}">         
+            <label for="lpz">&{'site.organisation'}: </label>
+            #{select field.name, items:lpz_list, valueProperty:'id', labelProperty:'name', value:lpz_id, class:"test", id:"lpz" }
+              #{option ''}&{'site.select'}#{/option}
+            #{/select}  
+            
+            <span class="req">*</span>
+            <span class="error" for="lpz" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        <div class="field_info">
+        <label><input type="checkbox" name="new_lpz" id="new_lpz"  value="1" ${new_lpz ? 'checked' : ''}/> &{'site.have_create_lpz'}</label> 
+		</div>
+		<div id="lpz_name" style="${new_lpz ? '':'display:none'}">
+        #{field 'lpz.name'}
+        <div class="field">         
+            <label for="${field.id}">&{'site.name'}: </label>
+            <input type="text" name="${field.name}" class="input_text" value="${lpz?.name}">
+            
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'lpz.zipCode'}
+        <div class="field">         
+            <label for="${field.id}">&{'site.zipcode'}: </label>
+            <input type="text" name="${field.name}" class="input_text" value="${lpz?.zipCode}">
+            
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'lpz.address'}
+        <div class="field">         
+            <label for="${field.id}">&{'site.address'}: </label>
+            <textarea type="text" name="${field.name}" class="input_text">${lpz?.address}</textarea>
+            
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'lpz.address1'}
+        <div class="field">         
+            <label for="${field.id}"> </label>
+            <textarea type="text" name="${field.name}" class="input_text">${lpz?.address1}</textarea>
+        </div>
+        #{/field}
+        #{field 'lpz.zkpo'}
+        <div class="field">         
+            <label for="${field.id}">&{'site.tel'}: </label>
+            <input type="text" name="${field.name}" class="input_text" value="${lpz?.zkpo}">
+            
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'lpz.tel'}
+        <div class="field">         
+            <label for="${field.id}">&{'site.zkpo'}: </label>
+            <input type="text" name="${field.name}" class="input_text" value="${lpz?.tel}">
+            
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        </div>
+</fieldset>
+    <fieldset>              
+        <legend>&{'site.user'}</legend>  
+    #{field 'rank_id'}
+        <div class="field">
+        	<label for="${field.id}">&{'site.rank'}: </label>
+            #{select field.name, items:rank_list, valueProperty:'id', labelProperty:'name', value:rank_id,  id:field.id }
+              #{option ''}&{'site.select'}#{/option}
+            #{/select}  
+             <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
     #{/field}
 
-    #{field 'user.name'}
-        <p class="${field.errorClass}">
-            <strong>ФИО:</strong> <input type="text" name="${field.name}" size="16" value="${user?.name}"> *
-            <span class="error">${field.error}</span>
-        </p>
+        
+    #{field 'speciality_id'}
+        <div class="field">
+        	<label for="${field.id}">&{'site.speciality'}:</label>
+            #{select field.name, items:speciality_list, valueProperty:'id', labelProperty:'name', value:speciality_id,  id:field.id }
+              #{option}&{'site.select'}#{/option}
+            #{/select}  
+             <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
     #{/field}
-    #{field 'user.email'}
-        <p class="${field.errorClass}">
-            <strong>Email:</strong> <input type="text" name="${field.name}" size="16" value="${user?.email}"> *
-            <span class="error">${field.error}</span>
-        </p>
+
+    #{field 'name'}
+        <div class="field">
+            <label for="${field.id}">&{'site.fio'}:</label> 
+            <input type="text" name="${field.name}" class="input_text" value="${name}">
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
     #{/field}
-    #{field 'user.password'}
-        <p class="${field.errorClass}">
-            <strong>Password:</strong> <input type="password" name="${field.name}" size="16" value="${user?.password}"> *
-            <span class="error">${field.error}</span>
-        </p>
+    #{field 'email'}
+        <div class="field">
+            <label for="${field.id}">Email:</label> <input type="text" name="${field.name}" class="input_text" value="${email}"> 
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+    #{/field}
+    #{field 'password'}
+        <div class="field">
+            <label for="${field.id}">&{'site.password'}:</label> <input type="password" name="${field.name}" id="${field.id}" class="input_text" value="${password}"> 
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
     #{/field}
     #{field 'verifyPassword'}
-        <p class="${field.errorClass}">
-            <strong>Verify password:</strong> <input type="password" name="${field.name}" size="16" value="${verifyPassword}"> *
-            <span class="error">${field.error}</span>
-        </p>
+        <div class="field">
+            <label for="${field.id}">&{'site.verify_password'}:</label> <input type="password" name="${field.name}" id="${field.id}" class="input_text" value="${verifyPassword}"> 
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+       </div>
     #{/field}    
-    #{field 'user.sex'}
-        <p class="${field.errorClass}">
-            <strong>Пол:</strong>
-             <select name="${field.name}">
-         		<option value="">Выберите...</option>
-         		<option #{if user?.sex=='M'}selected#{/if} value="M">Мужчина</option>
-         		<option #{if user?.sex=='F'}selected#{/if} value="F">Женшина</option>
-         	</select>
-             *
-            <span class="error">${field.error}</span>
-        </p>
+    #{field 'sex'}
+         <div class="field">
+            <label for="${field.id}">&{'site.sex'}:</label>
+            <label class="lab_sex"><input type="radio" name="${field.name}"  value="M" ${sex=='M' ? 'checked' : ''}/> &{'site.sex_m'}</label>
+            <label class="lab_sex"><input type="radio" name="${field.name}"  value="F" ${sex=='F' ? 'checked' : ''}/> &{'site.sex_f'}</label>
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
     #{/field}
-    #{field 'user.birthday'}
-        <p class="${field.errorClass}">
-            <strong>День рождения(dd.MM.yy):</strong> <input type="text" name="${field.name}" size="16" class="forpicker_cons_dob" value="${user?.birthday?.format('dd.MM.yyyy')}"> *
-            <span class="error">${field.error}</span>
-        </p>
-    #{/field}
-    <p class="buttons">
-        <input type="submit" value="Отправить"> <a href="@{index()}">Отмена</a>    
-    </p>
+    #{field 'birthday'}
+         <div class="field">
+            <label for="${field.id}">&{'site.birthday', play.libs.I18N.getDateFormat()}:</label>
+            <input type="text" name="${field.name}"  class="forpicker_cons_dob" value="${birthday?.format(play.libs.I18N.getDateFormat())}"> 
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+     #{/field}
+</fieldset>    
+#{field 'code'}
+    <div class="field">
+        <label for="code">&{'site.type_code'}: </label>
+        <div class="captcha">
+        <img src="@{Application.captcha(randomID)}" />
+        <br/>
+        <input type="text" name="code" id="code"  value="" /><span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+        <input type="hidden" name="randomID" value="${randomID}" />
+    </div>
+ #{/field}
+    <div class="buttons">
+        <input type="submit" value="&{'site.send'}" class="button">
+         *{ 
+<a href="@{index()}" class="button">&{'site.cancel'}</a>
+ }*
+    </div>
 #{/form}

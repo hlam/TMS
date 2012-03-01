@@ -31,7 +31,7 @@ public class Consultation extends Controller {
     		find+=sort;
     	System.out.println("find="+find);
     	List<Quest> quests = Quest.find(find, user ).fetch(storeArgs.page, storeArgs.limit);
-    	List<QuestList> list = QuestList.Conver(quests);
+    	List<QuestList> list = QuestList.Convert(quests);
         renderJSON(list);
     }
     
@@ -50,6 +50,7 @@ public class Consultation extends Controller {
     	history.price = price;
     	history.quest = quest;
     	history.save();
+    	LongPolling.Quest(advisor_id, quest.id, "new");
         renderJSON( new  extjs.Response(true, quest.id));
     }
     
