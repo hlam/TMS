@@ -42,10 +42,11 @@ public class Consultation extends Controller {
     	quest.patient = models.Patient.findById(patient_id);
     	quest.diagnosIn = diagnosIn; 
     	quest.dateRes = dateRes;
+    	quest.advisor = User.findById(advisor_id);
+    	quest.price = price;
+    	quest.question = question;
     	quest.save();
     	History history=new History();
-    	history.advisor = User.findById(advisor_id);
-    	history.speciality = models.Speciality.findById(speciality_id);
     	history.question = question;
     	history.price = price;
     	history.quest = quest;

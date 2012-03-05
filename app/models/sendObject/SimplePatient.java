@@ -37,7 +37,7 @@ public class SimplePatient {
 	public static void ConvertImtem(Calendar cal, Calendar dbo, Patient i,
 			SimplePatient item) {
 		item.id = i.getId();
-		item.name = i.name;
+		item.name = i.getName();
 		if(i.birthday!=null){
 			dbo.setTime(i.birthday);
 			item.age = cal.get(Calendar.YEAR)-dbo.get(Calendar.YEAR);
@@ -45,7 +45,7 @@ public class SimplePatient {
 		}
 		item.sex = i.sex;
 		item.country = i.country.getName();
-		item.city = i.city;
+		item.city = i.city.getName();
 		item.status = i.status;
 	}
 	

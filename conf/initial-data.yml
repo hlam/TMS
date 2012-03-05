@@ -274,16 +274,16 @@ City(322): {region: 20, name_ru: Харцизск, name_uk: Харцизськ, 
 City(323): {region: 27, name_ru: Харьков, name_uk: Харків, name_en: Kharkiv}
  
 
-Patient(1):  {name: Петров Пациент Петрович, sex: M, birthday: 1970-01-01, country: 1, city: 18, zipCode: 03115, city: Киев, address: 'ул.Иванова, 10, 10', address: , isCity: Yes, status: 0}
-Patient(2):  {name: Иванов Пациент Иванович, sex: M, birthday: 1975-02-01, country: 1, city: 18, zipCode: 03115, city: Киев, address: 'ул.Петрова, 10, 10',address: , isCity: Yes, status: 0}
-Patient(3):  {name: Сидорова Клава Захаровна, sex: F, birthday: 1980-03-01, country: 1, city: 18, zipCode: 07832, city: Киев, address: 'ул.Задворная, 1', address: , isCity: Yes, status: 0}
+Patient(1):  {last_name: Петров, first_name: Пациент, middle_name: Петрович, sex: M, birthday: 1970-01-01, country: 1, city: 18, zipCode: 03115, city: 18, address: 'ул.Иванова, 10, 10', address: , isCity: Yes, status: 0}
+Patient(2):  {last_name: Иванов, first_name: Пациент, middle_name: Иванович, sex: M, birthday: 1975-02-01, country: 1, city: 18, zipCode: 03115, city: 18, address: 'ул.Петрова, 10, 10',address: , isCity: Yes, status: 0}
+Patient(3):  {last_name: Сидорова, first_name: Клава, middle_name: Захаровна, sex: F, birthday: 1980-03-01, country: 1, city: 18, zipCode: 07832, city: 18, address: 'ул.Задворная, 1', address: , isCity: Yes, status: 0}
 
 Lpz(1): {name: ЦТМ,country: 1 ,city: 18, zipCode: 03115,  address: 'ул.Иванова, 10, 10', address: 'ул.Петрова, 10, 11', level: 1, type: 1, boss: Осташко Виталий Геннадиевич, zkpo: 1234567890, tel: 0441111111  }
 
-User(1): {name: Петров Пользователь Петрович, email: user@lpz-1.com, rank: 1, speciality: 1, advisor: 0, password: test, sex: M , birthday: 1980-01-01}
-User(2): {name: Акушер Ольга Специалист, email: advisor1@lpz-1.com, rank: 1,  speciality: 1, lpz: 1, advisor: 1, password: test, sex: F , birthday: 1970-01-01}
-User(3): {name: Айболит Иван Специалист, email: advisor2@lpz-1.com, rank: 1, speciality: 1,  advisor: 0, password: test, sex: M , birthday: 1970-01-01}
-User(4): {name: Фрейд Зигмунд Специалист, email: advisor3@lpz-1.com, rank: 1,  speciality: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
+User(1): {last_name: Петров, first_name: Пользователь, middle_name: Петрович, email: user@lpz-1.com, rank: 1, speciality: 1, advisor: 0, password: test, sex: M , birthday: 1980-01-01}
+User(2): {last_name: Акушер, first_name: Ольга, middle_name: Специалист, email: advisor1@lpz-1.com, rank: 1,  speciality: 1, lpz: 1, advisor: 1, password: test, sex: F , birthday: 1970-01-01}
+User(3): {last_name: Айболит, first_name: Иван, middle_name: Специалист, email: advisor2@lpz-1.com, rank: 1, speciality: 1,  advisor: 0, password: test, sex: M , birthday: 1970-01-01}
+User(4): {last_name: Фрейд, first_name: Зигмунд, middle_name: Специалист, email: advisor3@lpz-1.com, rank: 1,  speciality: 1, advisor: 0, password: test, sex: M , birthday: 1970-01-01}
 
 Advisor(1): {user: 2, speciality: 1, rank: 1, level: 1, type: 1}
 
@@ -291,13 +291,13 @@ Quest(1): {version: 1, lpz: 1, user: 1, patient: 3, type: 0, dateIn: 2011-12-30,
 Quest(2): {version: 1, lpz: 1, user: 1, patient: 1, type: 0, dateIn: 2011-12-10, dateRes: 2011-12-20, dateOut: 2011-12-15, diagnosIn: Нервничает, ICD10: 1234, status: 20}
 
 
-History(1): {quest: 1, user: 1, advisor: 2, speciality: 1, statusIn: 1, question: "Скоро родит?", dateIn: 2011-12-20, dateRes: 2011-12-30, price: 5.00}
-History(2): {quest: 2, user: 1, advisor: 3, speciality: 30, statusIn: 1, question: "Когда успокоится?", dateIn: 2011-12-10, dateRes: 2011-12-13, diagnos: Как только родит, price: 5.00}
-History(3): {quest: 2, user: 1, advisor: 4, speciality: 13, statusIn: 1, question: "Когда успокоится?", dateIn: 2011-12-10, dateRes: 2011-12-13,  price: 5.00}
+#History(1): {quest: 1, user: 1, advisor: 2, speciality: 1, statusIn: 1, question: "Скоро родит?", dateIn: 2011-12-20, dateRes: 2011-12-30, price: 5.00}
+#History(2): {quest: 2, user: 1, advisor: 3, speciality: 30, statusIn: 1, question: "Когда успокоится?", dateIn: 2011-12-10, dateRes: 2011-12-13, diagnos: Как только родит, price: 5.00}
+#History(3): {quest: 2, user: 1, advisor: 4, speciality: 13, statusIn: 1, question: "Когда успокоится?", dateIn: 2011-12-10, dateRes: 2011-12-13,  price: 5.00}
 
-LogHistory(1): {history: 1,user: 1, dateEvent: 2011-12-20, event: 1}
-LogHistory(2): {history: 2,user: 1, dateEvent: 2011-12-20, event: 1}
-LogHistory(3): {history: 2,user: 3, dateEvent: 2011-12-21, event: 7}
-LogHistory(4): {history: 2,user: 1, dateEvent: 2011-12-22, event: 20}
-LogHistory(5): {history: 3,user: 1, dateEvent: 2011-12-25, event: 1}
+#LogHistory(1): {history: 1,user: 1, dateEvent: 2011-12-20, event: 1}
+#LogHistory(2): {history: 2,user: 1, dateEvent: 2011-12-20, event: 1}
+#LogHistory(3): {history: 2,user: 3, dateEvent: 2011-12-21, event: 7}
+#LogHistory(4): {history: 2,user: 1, dateEvent: 2011-12-22, event: 20}
+#LogHistory(5): {history: 3,user: 1, dateEvent: 2011-12-25, event: 1}
 

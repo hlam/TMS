@@ -6,6 +6,8 @@ import play.db.jpa.*;
 
 import javax.persistence.*;
 
+import models.Quest.Status;
+
 import org.joda.time.DateTime;
 
 import java.math.BigDecimal;
@@ -13,6 +15,7 @@ import java.util.*;
 
 @Entity
 public class History extends Model {
+	
 	@Required
 	@ManyToOne
 	public Quest quest;
@@ -20,37 +23,39 @@ public class History extends Model {
 	@Required
 	@ManyToOne
 	public User user;
-	@Required
-	@ManyToOne
-	public User advisor;
+	public boolean isAdvisor;
+
 
 	@Required
-	@ManyToOne
-	public Speciality speciality;
+	public Date date;
 
-	@Required
-	public byte statusIn;
-	public byte statusOut;
-	
+    @Required()
+    @Enumerated(EnumType.STRING)
+    public Quest.Status status;
+
+
+
 	@Lob
 	@MaxSize(20000)
+	public String diagnosIn;
+
+	@Lob
+	@MaxSize(2000)
 	public String question;
-
-	@Required
-	public Date dateIn;
 	
-	@Required
-	public Date dateRes;
-
+	@MaxSize(4)
+	public String icd_code;
+	public Icd icd;
+	
 	@Lob
 	@MaxSize(20000)
 	public String diagnos;
-
+	
     @Column(precision=6, scale=2)
 	public BigDecimal price= BigDecimal.ZERO;
 
     public String toString() {
-        return question+":"+advisor.toString();
+        return date+":"+status;
     }
 
     

@@ -11,6 +11,7 @@ public class Bootstrap extends Job {
         // Check if the database is empty
         if(Rank.count() == 0) {
             Fixtures.loadModels("initial-data.yml");
+            Fixtures.loadModels("initial-data-icd.0.yml");
         }
     }
  

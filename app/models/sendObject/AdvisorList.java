@@ -26,7 +26,7 @@ public class AdvisorList {
 		for(Advisor q:advisors){
 			AdvisorList item = new AdvisorList();
 			item.id = q.user.id;
-			item.name = q.user.name;
+			item.name = q.user.getName();
 			if( q.user.rank!=null)
 			item.rank = q.user.rank.getName();
 			if( q.user.lpz!=null){

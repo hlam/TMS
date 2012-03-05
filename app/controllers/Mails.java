@@ -7,7 +7,7 @@ import play.mvc.Mailer;
 
 public class Mails extends Mailer {
     public static void welcome(User user) {
-    	 setSubject(Messages.get("mail.welcome", user.name));
+    	 setSubject(Messages.get("mail.welcome", user.getName()));
          addRecipient(user.email);
          setFrom(Messages.get("mail.from_email"));
          send("Mails/welcome."+Lang.get(),user);

@@ -18,7 +18,7 @@ public class QuestList {
 	public String diagnosIn;
 	public String question;
 	public String ICD10;
-	public byte status;
+	public String status;
 	public String status_name;
 	
 	public static List<QuestList> Convert(List<Quest> quests){
@@ -26,19 +26,15 @@ public class QuestList {
 		ret = new ArrayList<QuestList>();
 		for(Quest q:quests){
 			QuestList item = new QuestList();
-			item.patientName = q.patient.name;
+			item.patientName = q.patient.getName();
+			item.advisorName = q.advisor.getName();
 			item.dateIn = q.dateIn;
 			item.dateRes = q.dateRes;
-			item.ICD10 = q.ICD10;
-			item.status = q.status;
+			item.ICD10 = q.icd.code+" "+q.icd.name;
+			item.status = q.status.toString();
 			item.status_name = q.getStatusName();
 			item.diagnosIn = q.diagnosIn.length()>200?q.diagnosIn.substring(0, 200)+" ...":q.diagnosIn;
-			if(q.histories.size()>0){
-				History history = q.histories.get(0);
-				if(history.speciality!=null)				item.speciality = history.speciality.getName();
-				if(history.advisor!=null)  item.advisorName = history.advisor.name;
-				item.question = history.question.length()>200?history.question.substring(0, 200)+" ...":history.question;
-			}
+			item.question = q.question.length()>200?q.question.substring(0, 200)+" ...":q.question;
 			ret.add(item);
 			
 		}

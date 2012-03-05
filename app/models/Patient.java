@@ -10,8 +10,17 @@ import java.util.*;
 
 @Entity
 public class Patient extends Model {
+	
 	@Required
-	public String name;
+	@ManyToOne
+	public User user;
+	
+	@Required()
+	public String first_name;
+	@Required()
+	public String last_name;
+	public String middle_name;
+
 	@Required
 	@MaxSize(1)
 	public String sex;
@@ -20,32 +29,40 @@ public class Patient extends Model {
 	@Required
 	@ManyToOne
 	public Country country;
-	@Required
-	@ManyToOne
-	public Region region;
 	
 	@Required
 	@MaxSize(5)
 	public String zipCode;
 	@Required
-	public String city;
+	@ManyToOne
+	public City city;
 	@Required
 	@MaxSize(150)
 	public String address;
 	@MaxSize(150)
 	public String address1;
 	
-	@Required
-	public boolean isCity;
 	
 	@Phone
 	public String tel;
 	
+	public String external_id;
+	
 	public Integer status;
 	
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "patient",  fetch = FetchType.LAZY)
+	public List<MedFile> files;	
+
+	@Required
+	public Date create = new Date();
+	
     public String toString() {
-        return name;
+        return getName();
     }
+
+	public String getName() {
+		return first_name+" "+last_name;
+	}
 
 
 }

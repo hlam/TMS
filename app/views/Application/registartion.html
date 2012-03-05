@@ -32,7 +32,8 @@
 		
 					,rank_id: {required: true}
 					,speciality_id: {required: true}
-					,name: {required: true}
+					,first_name: {required: true}
+					,last_name: {required: true}
 					,password: {required: true, minlength:4}
 					,verifyPassword: {required: true, equalTo:"#password"}
 					,email: {required: true, email: true, remote:"/validate/email"}
@@ -51,7 +52,8 @@
 
 					, rank_id: {required: "&{'validation.required'}"}
 					, speciality_id: {required: "&{'validation.required'}"}
-					, name: {required: "&{'validation.required'}"}
+					, first_name: {required: "&{'validation.required'}"}
+					, last_name: {required: "&{'validation.required'}"}
 					, password: {required: "&{'validation.required'}", minlength: "&{'validation.minSize', 4}"}
 					, verifyPassword: {required: "&{'validation.required'}", equalTo: "&{'validation.password_nomatch'}"}
 					,email: {required: "&{'validation.required'}", email: "&{'validation.email'}", remote: "&{'validation.user_exist'}"}
@@ -153,6 +155,16 @@
             <span class="error" for="${field.id}" generated="true">${field.error}</span>
         </div>
         #{/field}
+        #{field 'lpz.boss'}
+        <div class="field">         
+            <label for="${field.id}">&{'site.boss'}: </label>
+            <input type="text" name="${field.name}" class="input_text" value="${lpz?.boss}">
+            
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+        #{/field}
+        
         </div>
 </fieldset>
     <fieldset>              
@@ -180,11 +192,26 @@
         </div>
     #{/field}
 
-    #{field 'name'}
+    #{field 'first_name'}
         <div class="field">
-            <label for="${field.id}">&{'site.fio'}:</label> 
-            <input type="text" name="${field.name}" class="input_text" value="${name}">
+            <label for="${field.id}">&{'site.first_name'}:</label> 
+            <input type="text" name="${field.name}" class="input_text" value="${first_name}">
             <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+    #{/field}
+    #{field 'last_name'}
+        <div class="field">
+            <label for="${field.id}">&{'site.last_name'}:</label> 
+            <input type="text" name="${field.name}" class="input_text" value="${last_name}">
+            <span class="req">*</span>
+            <span class="error" for="${field.id}" generated="true">${field.error}</span>
+        </div>
+    #{/field}
+    #{field 'middle_name'}
+        <div class="field">
+            <label for="${field.id}">&{'site.middle_name'}:</label> 
+            <input type="text" name="${field.name}" class="input_text" value="${middle_name}">
             <span class="error" for="${field.id}" generated="true">${field.error}</span>
         </div>
     #{/field}

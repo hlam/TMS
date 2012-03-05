@@ -1,0 +1,222 @@
+#select CONCAT('Icd(', id ,'): {name: \'', name,'\', code: \'', code,'\',parent: ', ifnull(parent_id,'null') ,',parent_code: \'',ifnull(parent_code,'null'),'\',node_count: ',node_count ,',additional_info: \'',replace(ifnull(additional_info,'null'),'\n','\\n'),'\'}') 
+#FROM class_mkb
+#LIMIT 0, 200000
+
+
+Icd(1): {name: 'НЕКОТОРЫЕ ИНФЕКЦИОННЫЕ И ПАРАЗИТАРНЫЕ БОЛЕЗНИ', code: 'A00-B99',parent: null,parent_code: null,node_count: 21,additional_info: 'Включены: болезни, обычно рассматриваемые как передающиеся, или трансмиссивные\nИсключены: носительство или подозреваемое носительство возбудителя инфекционной болезни (Z22.-) некоторые локализованные инфекции - см. классы, относящиеся к системам органов инфекционные и паразитарные болезни, осложняющие беременность, роды и послеродовой период (за исключением акушерского столбняка и болезни, вызванной вирусом иммунодефицита человека [ВИЧ] (O98.-) инфекционные и паразитарные болезни, характерные для перинатального периода (за исключением перинатального столбняка, врожденного сифилиса, перинатальной гонококковой инфекции и перинатального заболевания, вызванного вирусом иммунодефицита человека [ВИЧ] (P35-P39) грипп и другие острые респираторные инфекции (J00- J22)\nВ этот класс входят следующие блоки:\nA00-A09 Кишечные инфекции\nA15-A19 Туберкулез\nA20-A28 Некоторые бактериальные зоонозы\nA30-A49 Другие бактериальные болезни\nA50-A64 Инфекции, передающиеся преимущественно половым путем\nA65-A69 Другие болезни, вызываемые спирохетами\nA70-A74 Другие болезни, вызываемые хламидиями\nA75-A79 Риккетсиозы\nA80-A89 Вирусные инфекции центральной нервной системы\nA90-A99 Вирусные лихорадки, передаваемые членистоногими, и вирусные геморрагические лихорадки\nB00-B09 Вирусные инфекции, характеризующиеся поражениями кожи и слизистых оболочек\nB15-B19 Вирусный гепатит\nB20-B24 Болезнь, вызванная вирусом иммунодефицита человека [ВИЧ]\nB25-B34 Другие вирусные болезни\nB35-B49 Микозы\nB50-B64 Протозойные болезни\nB65-B83 Гельминтозы\nB85-B89 Педикулез, акариаз и другие инфестации\nB90-B94 Последствия инфестационных и паразитарных болезней\nB95-B97 Бактериальные, вирусные и другие инфекционные агенты\nB99 Другие инфекционные болезни'}
+Icd(2): {name: 'КИШЕЧНЫЕ ИНФЕКЦИИ', code: 'A00-A09',parent: 1,parent_code: 'A00-B99',node_count: 10,additional_info: null}
+Icd(3): {name: 'Холера', code: 'A00',parent: 2,parent_code: 'A00-A09',node_count: 3,additional_info: null}
+Icd(4): {name: 'Холера, вызванная холерным вибрионом 01, биовар cholerae', code: 'A00.0',parent: 3,parent_code: 'A00',node_count: 0,additional_info: 'Классическая холера'}
+Icd(5): {name: 'Холера, вызванная холерным вибрионом 01, биовар eltor', code: 'A00.1',parent: 3,parent_code: 'A00',node_count: 0,additional_info: 'Холера Эль-Тор'}
+Icd(6): {name: 'Холера неуточненная', code: 'A00.9',parent: 3,parent_code: 'A00',node_count: 0,additional_info: null}
+Icd(7): {name: 'Тиф и паратиф', code: 'A01',parent: 2,parent_code: 'A00-A09',node_count: 5,additional_info: null}
+Icd(8): {name: 'Брюшной тиф', code: 'A01.0',parent: 7,parent_code: 'A01',node_count: 0,additional_info: 'Инфекция, вызванная Salmonella typhi'}
+Icd(9): {name: 'Паратиф A', code: 'A01.1',parent: 7,parent_code: 'A01',node_count: 0,additional_info: null}
+Icd(10): {name: 'Паратиф B', code: 'A01.2',parent: 7,parent_code: 'A01',node_count: 0,additional_info: null}
+Icd(11): {name: 'Паратиф C', code: 'A01.3',parent: 7,parent_code: 'A01',node_count: 0,additional_info: null}
+Icd(12): {name: 'Паратиф неуточненный', code: 'A01.4',parent: 7,parent_code: 'A01',node_count: 0,additional_info: 'Инфекция, вызванная Salmonella paratyphi, БДУ'}
+Icd(13): {name: 'Другие сальмонеллезные инфекции', code: 'A02',parent: 2,parent_code: 'A00-A09',node_count: 5,additional_info: 'Включена: инфекция (или пищевое отравление), вызванная Salmonella любого серотипа, отличной от S.typhi и S.paratyphi'}
+Icd(14): {name: 'Сальмонеллезный энтерит', code: 'A02.0',parent: 13,parent_code: 'A02',node_count: 0,additional_info: 'Сальмонеллез'}
+Icd(15): {name: 'Сальмонеллезная септицемия', code: 'A02.1',parent: 13,parent_code: 'A02',node_count: 0,additional_info: null}
+Icd(16): {name: 'Локализованная сальмонеллезная инфекция', code: 'A02.2+',parent: 13,parent_code: 'A02',node_count: 0,additional_info: 'Сальмонеллезный(ая): . артрит (M01.3*) . менингит (G01*) . остеомиелит (M90.2*) . пневмония (J17.0*) . тубулоинтерстициальная болезнь почек (N16.0*)'}
+Icd(17): {name: 'Другая уточненная сальмонеллезная инфекция', code: 'A02.8',parent: 13,parent_code: 'A02',node_count: 0,additional_info: null}
+Icd(18): {name: 'Сальмонеллезная инфекция неуточненная', code: 'A02.9',parent: 13,parent_code: 'A02',node_count: 0,additional_info: null}
+Icd(19): {name: 'Шигеллез', code: 'A03',parent: 2,parent_code: 'A00-A09',node_count: 6,additional_info: null}
+Icd(20): {name: 'Шигеллез, вызванный Shigella dysenteriae', code: 'A03.0',parent: 19,parent_code: 'A03',node_count: 0,additional_info: 'Шигеллез группы A [дизентерия Шига-Крузе]'}
+Icd(21): {name: 'Шигеллез, вызванный Shigella flexneri', code: 'A03.1',parent: 19,parent_code: 'A03',node_count: 0,additional_info: 'Шигеллез группы B'}
+Icd(22): {name: 'Шигеллез, вызванный Shigella boydii', code: 'A03.02',parent: 19,parent_code: 'A03',node_count: 0,additional_info: 'Шигеллез группы C'}
+Icd(23): {name: 'Шигеллез, вызванный Shigella sonnei', code: 'A03.3',parent: 19,parent_code: 'A03',node_count: 0,additional_info: 'Шигеллез группы D'}
+Icd(24): {name: 'Другой шигеллез', code: 'A03.8',parent: 19,parent_code: 'A03',node_count: 0,additional_info: null}
+Icd(25): {name: 'Шигеллез неуточненный', code: 'A03.9',parent: 19,parent_code: 'A03',node_count: 0,additional_info: 'Бактериальная дизентерия БДУ'}
+Icd(26): {name: 'Другие бактериальные кишечные инфекции', code: 'A04',parent: 2,parent_code: 'A00-A09',node_count: 10,additional_info: 'Исключены: пищевые отравления бактериальные (A05.-) туберкулезный энтерит (A18.3)'}
+Icd(27): {name: 'Энтеропатогенная инфекция, вызванная Escherichia coli', code: 'A04.0',parent: 26,parent_code: 'A04',node_count: 0,additional_info: null}
+Icd(28): {name: 'Энтеротоксигенная инфекция, вызванная Escherichia coli', code: 'A04.1',parent: 26,parent_code: 'A04',node_count: 0,additional_info: null}
+Icd(29): {name: 'Энтероинвазивная инфекция, вызванная Escherichia coli', code: 'A04.2',parent: 26,parent_code: 'A04',node_count: 0,additional_info: null}
+Icd(30): {name: 'Энтерогеморрагическая инфекция, вызванная Escherichia coli', code: 'A04.3',parent: 26,parent_code: 'A04',node_count: 0,additional_info: null}
+Icd(31): {name: 'Другие кишечные инфекции, вызванные Escherichia coli', code: 'A04.4',parent: 26,parent_code: 'A04',node_count: 0,additional_info: 'Энтерит, вызванный Escherichia coli, БДУ'}
+Icd(32): {name: 'Энтерит, вызванный Campylobacter', code: 'A04.5',parent: 26,parent_code: 'A04',node_count: 0,additional_info: null}
+Icd(33): {name: 'Энтерит, вызванный Yersinia enterocolitica', code: 'A04.6',parent: 26,parent_code: 'A04',node_count: 0,additional_info: 'Исключен: экстраинтестинальный иерсиниоз (A28.2)'}
+Icd(34): {name: 'Энтероколит, вызванный Clostridium difficile', code: 'A04.7',parent: 26,parent_code: 'A04',node_count: 0,additional_info: null}
+Icd(35): {name: 'Другие уточненные бактериальные кишечные инфекции', code: 'A04.8',parent: 26,parent_code: 'A04',node_count: 0,additional_info: null}
+Icd(36): {name: 'Бактериальная кишечная инфекция неуточненная', code: 'A04.9',parent: 26,parent_code: 'A04',node_count: 0,additional_info: 'Бактериальный энтерит БДУ'}
+Icd(37): {name: 'Другие бактериальные пищевые отравления', code: 'A05',parent: 2,parent_code: 'A00-A09',node_count: 7,additional_info: 'Исключены: инфекция, вызванная Escherichia coli (A04.0-A04.4) листериоз (A32.-) сальмонеллезное пищевое отравление и инфекция (A02.-) токсическое действие ядовитых пищевых продуктов (T61-T62)'}
+Icd(38): {name: 'Стафилококковое пищевое отравление', code: 'A05.0',parent: 37,parent_code: 'A05',node_count: 0,additional_info: null}
+Icd(39): {name: 'Ботулизм', code: 'A05.1',parent: 37,parent_code: 'A05',node_count: 0,additional_info: 'Классическое пищевое отравление, вызванное Clostridium botulinum'}
+Icd(40): {name: 'Пищевое отравление, вызванное Clostridium perfringens', code: 'A05.2',parent: 37,parent_code: 'A05',node_count: 0,additional_info: '[Clostridium welchii] Некротический энтерит Pig-bel'}
+Icd(41): {name: 'Пищевое отравление, вызванное Vibrio parahaemolyticus', code: 'A05.3',parent: 37,parent_code: 'A05',node_count: 0,additional_info: null}
+Icd(42): {name: 'Пищевое отравление, вызванное Bacillus cereus', code: 'A05.4',parent: 37,parent_code: 'A05',node_count: 0,additional_info: null}
+Icd(43): {name: 'Другие уточненные бактериальные пищевые отравления', code: 'A05.8',parent: 37,parent_code: 'A05',node_count: 0,additional_info: null}
+Icd(44): {name: 'Бактериальное пищевое отравление неуточненное', code: 'A05.9',parent: 37,parent_code: 'A05',node_count: 0,additional_info: null}
+Icd(45): {name: 'Амебиаз', code: 'A06',parent: 2,parent_code: 'A00-A09',node_count: 10,additional_info: 'Включена: инфекция, вызванная Entamoeba histolytica Исключены: другие протозойные кишечные болезни (A07.-)'}
+Icd(46): {name: 'Острая амебная дизентерия', code: 'A06.0',parent: 45,parent_code: 'A06',node_count: 0,additional_info: 'Острый амебиаз Кишечный амебиаз БДУ'}
+Icd(47): {name: 'Хронический кишечный амебиаз', code: 'A06.1',parent: 45,parent_code: 'A06',node_count: 0,additional_info: null}
+Icd(48): {name: 'Амебный недизентерийный колит', code: 'A06.2',parent: 45,parent_code: 'A06',node_count: 0,additional_info: null}
+Icd(49): {name: 'Амебома кишечника', code: 'A06.3',parent: 45,parent_code: 'A06',node_count: 0,additional_info: 'Амебома БДУ'}
+Icd(50): {name: 'Амебный абсцесс печени', code: 'A06.4',parent: 45,parent_code: 'A06',node_count: 0,additional_info: 'Печеночный амебиаз'}
+Icd(51): {name: 'Амебный абсцесс легкого (J99.8*)', code: 'A06.5+',parent: 45,parent_code: 'A06',node_count: 0,additional_info: 'Амебный абсцесс легкого (и печени)'}
+Icd(52): {name: 'Амебный абсцесс головного мозга (G07*)', code: 'A06.6+',parent: 45,parent_code: 'A06',node_count: 0,additional_info: 'Амебный абсцесс головного мозга (и печени) (и легкого)'}
+Icd(53): {name: 'Кожный амебиаз', code: 'A06.7',parent: 45,parent_code: 'A06',node_count: 0,additional_info: null}
+Icd(54): {name: 'Амебная инфекция другой локализации', code: 'A06.8',parent: 45,parent_code: 'A06',node_count: 0,additional_info: 'Амебный: . аппендицит . баланит+ (N51.2*)'}
+Icd(55): {name: 'Амебиаз неуточненный', code: 'A06.9',parent: 45,parent_code: 'A06',node_count: 0,additional_info: null}
+Icd(56): {name: 'Другие протозойные кишечные болезни', code: 'A07',parent: 2,parent_code: 'A00-A09',node_count: 6,additional_info: null}
+Icd(57): {name: 'Балантидиаз', code: 'A07.0',parent: 56,parent_code: 'A07',node_count: 0,additional_info: 'Инфузорная дизентерия'}
+Icd(58): {name: 'Жиардиаз [лямблиоз]', code: 'A07.1',parent: 56,parent_code: 'A07',node_count: 0,additional_info: null}
+Icd(59): {name: 'Криптоспоридиоз', code: 'A07.2',parent: 56,parent_code: 'A07',node_count: 0,additional_info: null}
+Icd(60): {name: 'Изоспороз', code: 'A07.3',parent: 56,parent_code: 'A07',node_count: 0,additional_info: 'Инфекция, вызванная Isospora belli и Isospora hominis Кишечный кокцидиоз Изоспориаз'}
+Icd(61): {name: 'Другие уточненные протозойные кишечные болезни', code: 'A07.8',parent: 56,parent_code: 'A07',node_count: 0,additional_info: 'Кишечный трихомониаз Саркоцистоз Саркоспоридиоз'}
+Icd(62): {name: 'Протозойная кишечная болезнь неуточненная', code: 'A07.9',parent: 56,parent_code: 'A07',node_count: 0,additional_info: 'Диарея, вызванная жгутиковыми Протозойный(ая): . колит . диарея . дизентерия'}
+Icd(63): {name: 'Вирусные и другие уточненные кишечные инфекции', code: 'A08',parent: 2,parent_code: 'A00-A09',node_count: 6,additional_info: 'Исключен: грипп с вовлечением желудочно-кишечного тракта (J10.8, J11.8)'}
+Icd(64): {name: 'Ротавирусный энтерит', code: 'A08.0',parent: 63,parent_code: 'A08',node_count: 0,additional_info: null}
+Icd(65): {name: 'Острая гастроэнтеропатия, вызванная возбудителем Норволк', code: 'A08.1',parent: 63,parent_code: 'A08',node_count: 0,additional_info: 'Small round structured virus enterites'}
+Icd(66): {name: 'Аденовирусный энтерит', code: 'A08.2',parent: 63,parent_code: 'A08',node_count: 0,additional_info: null}
+Icd(67): {name: 'Другие вирусные энтериты', code: 'A08.3',parent: 63,parent_code: 'A08',node_count: 0,additional_info: null}
+Icd(68): {name: 'Вирусная кишечная инфекция неуточненная', code: 'A08.4',parent: 63,parent_code: 'A08',node_count: 0,additional_info: 'Вирусный(ая): . энтерит БДУ . гастроэнтерит БДУ . гастроэнтеропатия БДУ'}
+Icd(69): {name: 'Другие уточненные кишечные инфекции', code: 'A08.5',parent: 63,parent_code: 'A08',node_count: 0,additional_info: null}
+Icd(70): {name: 'Диарея и гастроэнтерит предположительно инфекционного происхождения', code: 'A09',parent: 2,parent_code: 'A00-A09',node_count: 0,additional_info: 'Примечание. В странах, где диагнозы, перечисленные в рубрике A09, при отсутствии уточнения могут рассматриваться как болезни неинфекционного происхождения, указанные состояния должны классифицироваться в рубрике K52.9 Катар кишечный [интестинальный] Колит } БДУ Энтерит } геморрагический Гастроэнтерит } септический Диарея: * БДУ * дизентерийная * эпидемическая Инфекционная диарея БДУ Исключены: вызванные бактериями, простейшими, вирусами и другими уточненными инфекционными агентами (A00-A08) неинфекционная диарея (K52.9) . неонатальная (P78.3)'}
+Icd(72): {name: 'ТУБЕРКУЛЕЗ', code: 'A15-A19',parent: 1,parent_code: 'A00-B99',node_count: 5,additional_info: 'Включены: инфекции, вызванные Mycobacterium tuberculosis и Mycobacterium bovis\nИсключены: врожденный туберкулез (P37.0) пневмокониоз, связанный с туберкулезом (J65) последствия туберкулеза (B90.-) силикотуберкулез (J65)'}
+Icd(73): {name: 'Туберкулез органов дыхания, подтвержденный бактериологически и гистологически', code: 'A15',parent: 72,parent_code: 'A15-A19',node_count: 10,additional_info: null}
+Icd(74): {name: 'Туберкулез легких, подтвержденный бактериоскопически с наличием или отсутствием роста культуры', code: 'A15.0',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Туберкулезная(ый): . бронхоэктазия } подтверждение бактериоскопически . фиброз легкого } с наличием или отсутствием роста . пневмония } культуры . пневмоторакс }'}
+Icd(75): {name: 'Туберкулез легких, подтвержденный только ростом культуры', code: 'A15.1',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Состояния, перечисленные в рубрике A15.0, подтвержденные только ростом культуры'}
+Icd(76): {name: 'Туберкулез легких, подтвержденный гистологически', code: 'A15.2',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Состояния, перечисленные в рубрике A15.0, подтвержденные гистологически'}
+Icd(77): {name: 'Туберкулез легких, подтвержденный неуточненными методами', code: 'A15.3',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Состояния, перечисленные в рубрике A15.0, подтвержденные, но без уточнения бактериологически или гистологически'}
+Icd(78): {name: 'Туберкулез внутригрудных лимфатических узлов, подтвержденный бактериологически и гистологически', code: 'A15.4',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Туберкулез лимфатических узлов: . прикорневых } подтвержденный бактериологи. медиастинальных } чески и гистологически . трахеобронхинальных } Исключен: если уточнен как первичный (A15.7)'}
+Icd(79): {name: 'Туберкулез гортани, трахеи и бронхов, подтвержденный бактериологически и гистологически', code: 'A15.5',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Туберкулез: . бронхов } подтвержденный бактериологи. голосового аппарата } чески и гистологически . гортани } . трахеи }'}
+Icd(80): {name: 'Туберкулезный плеврит, подтвержденный бактериологически и гистологически', code: 'A15.6',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Туберкулез плевры } подтвержденный(ая) бактериоТуберкулезная эмпиема } логически и гистологически Исключен: туберкулезный плеврит при первичном туберкулезе органов дыхания, подтвержденный бактериологически и гистологически (A15.7)'}
+Icd(81): {name: 'Первичный туберкулез органов дыхания, подтвержденный бактериологически и гистологически', code: 'A15.7',parent: 73,parent_code: 'A15',node_count: 0,additional_info: null}
+Icd(82): {name: 'Туберкулез других органов дыхания, подтвержденный бактериологически и гистологически', code: 'A15.8',parent: 73,parent_code: 'A15',node_count: 0,additional_info: 'Туберкулез медиастиналь- } подтвержденный(ая) бактерионых лимфатических узлов } логически и гистологически Туберкулез носоглотки } Туберкулез: } . носа } . придаточных пазух }'}
+Icd(83): {name: 'Туберкулез органов дыхания неуточненной локализации, подтвержденный бактериологически и гистологически', code: 'A15.9',parent: 73,parent_code: 'A15',node_count: 0,additional_info: null}
+Icd(84): {name: 'Туберкулез органов дыхания, не подтвержденный бактериологически или гистологически', code: 'A16',parent: 72,parent_code: 'A15-A19',node_count: 9,additional_info: null}
+Icd(85): {name: 'Туберкулез легких при отрицательных результатах бактериологических и гистологических исследований', code: 'A16.0',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Туберкулезная(ый): } при отрицательных результатах бак. бронхоэктазия } териологического и гистологического . фиброз легкого } исследований . пневмония } . пневмоторакс }'}
+Icd(86): {name: 'Туберкулез легких без проведения бактериологического и гистологического исследований', code: 'A16.1',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Состояния, перечисленные в рубрике A16.0 без проведения бактериологического и гистологического исследования'}
+Icd(87): {name: 'Туберкулез легких без упоминания о бактериологическом или гистологическом подтверждении', code: 'A16.2',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Туберкулез легких } БДУ (без упоминания о бактериологиТуберкулезная(ый): } ческом или гистологическом подтвер. фиброз легкого } ждении) . бронхоэктазия } . пневмония } . пневмоторакс }'}
+Icd(88): {name: 'Туберкулез внутригрудных лимфатических узлов без упоминания о бактериологическом или гистологическом подтверждении', code: 'A16.3',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Туберкулез лимфатических узлов: . прикорневых } БДУ (без упоминания о бактериологи. внутригрудных } ческом или гистологическом подтвер. медиастинальных } ждении) . трахеобронхиальных } Исключен: туберкулез внутригрудных лимфатических узлов, уточненный как первичный (A16.7)'}
+Icd(89): {name: 'Туберкулез гортани, трахеи и бронхов без упоминания о бактериологическом или гистологическом подтверждении', code: 'A16.4',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Туберкулез: } . бронхов } БДУ (без упоминания о бактериологи. гортани } ческом подтверждении) . голосового аппарата } . трахеи }'}
+Icd(90): {name: 'Туберкулезный плеврит без упоминания о бактериологическом или гистологическом подтверждении', code: 'A16.5',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Туберкулез плевры } Туберкулезная(ый): } БДУ (без упоминания о бактериологи. эмпиема } ческом или гистологическом подтвер. плеврит } ждении) Исключен: туберкулезный плеврит при первичном туберкулезе органов дыхания (A16.7)'}
+Icd(91): {name: 'Первичный туберкулез органов дыхания без упоминания о бактериологическом или гистологическом подтверждении', code: 'A16.7',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Первичный: . туберкулез органов дыхания БДУ . туберкулезный комплекс'}
+Icd(92): {name: 'Туберкулез других органов дыхания без упоминания о бактериологическом или гистологическом подтверждении', code: 'A16.8',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Туберкулез медиастинальных } лимфатических узлов } БДУ (без упоминания о Туберкулез носоглотки } бактериологическом и Туберкулез: } гистологическом подтвер. носа } ждении) . придаточный пазух }'}
+Icd(93): {name: 'Туберкулез органов дыхания неуточненной локализации без упоминания о бактериологическом или гистологическом подтверждении', code: 'A16.9',parent: 84,parent_code: 'A16',node_count: 0,additional_info: 'Туберкулез органов дыхания БДУ Туберкулез БДУ'}
+Icd(94): {name: 'Туберкулез нервной системы', code: 'A17+',parent: 72,parent_code: 'A15-A19',node_count: 4,additional_info: null}
+Icd(95): {name: 'Туберкулезный менингит (G01*)', code: 'A17.0+',parent: 94,parent_code: 'A17+',node_count: 0,additional_info: 'Туберкулез мозговых оболочек (головного мозга) (спинного мозга) Туберкулезный лептоменингит'}
+Icd(96): {name: 'Менингеальная туберкулема (G07*)', code: 'A17.1+',parent: 94,parent_code: 'A17+',node_count: 0,additional_info: 'Туберкулема мозговых оболочек'}
+Icd(97): {name: 'Туберкулез нервной системы других локализаций', code: 'A17.8+',parent: 94,parent_code: 'A17+',node_count: 0,additional_info: 'Туберкулема } головного мозга (G07*) Туберкулез } спинного мозга (G07*0 Туберкулезный(ая): . абсцесс головного мозга (G07*) . менингоэнцефалит (G05.0*) . миелит (G05.*) . полиневропатия (G63.0*)'}
+Icd(98): {name: 'Туберкулез нервной системы неуточненный (G99.8*)', code: 'A17.9+',parent: 94,parent_code: 'A17+',node_count: 0,additional_info: null}
+Icd(99): {name: 'Туберкулез других органов', code: 'A18',parent: 72,parent_code: 'A15-A19',node_count: 9,additional_info: null}
+Icd(100): {name: 'Туберкулез костей и суставов', code: 'A18.0+',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Туберкулез: . тазобедренного сустава (M01.1*) . коленного сустава (M01.1*) . позвоночника (M49.0*) Туберкулезный(ая): . артрит (M01.1*) . мастоидит (H75.0*) . некроз кости (M90.0*) . остеит (M90.0*) . остеомиелит (M90.0*) . синовит (M68.0*) . теносиновит (M68.0*)'}
+Icd(101): {name: 'Туберкулез мочеполовых органов', code: 'A18.1+',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Туберкулез: . мочевого пузыря (N33.0*) . шейки матки (N74.0*) . почек (N29.1*) . мужских половых органов (N51.*) . уретры (N29.1*) Туберкулезное воспаление органов и тканей малого таз у женщин (N74.1*)'}
+Icd(102): {name: 'Туберкулезная периферическая лимфаденопатия', code: 'A18.2',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Туберкулезный аденит Исключены: туберкулез лимфатических узлов: . внутригрудных (A15.4, A16.3) . брыжеечных и ретроперитонеальных (A18.3) туберкулезная трахеобронхиальная аденопатия (A15.4, A16.3)'}
+Icd(103): {name: 'Туберкулез кишечника, брюшины и брыжеечных лимфатических узлов', code: 'A18.3',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Туберкулез: . заднего прохода и прямой кишки+ (K93.0*) . кишечника (толстого) (тонкого)+ (K93.0*) . ретроперитонеальный (лимфатических узлов) Туберкулезный: . асцит . энтерит+ (K93.0*) . перитонит+ (K67.3*)'}
+Icd(104): {name: 'Туберкулез кожи и подкожной клетчатки', code: 'A18.4',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Эритема индуративная туберкулезная Волчанка: . язвенная . обыкновенная . БДУ . века+ (H03.1*) Скрофулодерма Исключена: красная волчанка (L93.-) . системная (M32.-)'}
+Icd(105): {name: 'Туберкулез глаза', code: 'A18.5+',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Туберкулезный: . хориоретинит (H32.0*) . эписклерит (H19.0*) . интерстициальный кератит (H19.2*) . иридоциклит (H22.0*) . кератоконъюктивит (интерстициальный) (фликтенулезный) (H19.2*) Исключена: волчанка века обыкновенная (A18.4)'}
+Icd(106): {name: 'Туберкулез уха', code: 'A18.6+',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Туберкулезный средний отит (H67.0*) Исключен: туберкулезный мастоидит (A18.0)'}
+Icd(107): {name: 'Туберкулез надпочечников (E35.1*)', code: 'A18.7+',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Болезнь Аддисона туберкулезной этиологии'}
+Icd(108): {name: 'Туберкулез других уточненных органов', code: 'A18.8+',parent: 99,parent_code: 'A18',node_count: 0,additional_info: 'Туберкулез: . эндокарда (I39.8*) . миокарда (I41.0*) . пищевода (K23.0*) . перикарда (I32.0*) . щитовидной железы (E35.0*) Туберкулезный артериит сосудов мозга (I68.1*)'}
+Icd(109): {name: 'Милиарный туберкулез', code: 'A19',parent: 72,parent_code: 'A15-A19',node_count: 5,additional_info: 'Включены: туберкулез: . диссеминированный . генерализованный туберкулезный полисерозит'}
+Icd(110): {name: 'Острый милиарный туберкулез одной уточненной локализации', code: 'A19.0',parent: 109,parent_code: 'A19',node_count: 0,additional_info: null}
+Icd(111): {name: 'Острый милиарный туберкулез множественной локализации', code: 'A19.1',parent: 109,parent_code: 'A19',node_count: 0,additional_info: null}
+Icd(112): {name: 'Острый милиарный туберкулез неуточненной локализации', code: 'A19.2',parent: 109,parent_code: 'A19',node_count: 0,additional_info: null}
+Icd(113): {name: 'Другие формы милиарного туберкулеза', code: 'A19.8',parent: 109,parent_code: 'A19',node_count: 0,additional_info: null}
+Icd(114): {name: 'Милиарный туберкулез неуточненной локализации', code: 'A19.9',parent: 109,parent_code: 'A19',node_count: 0,additional_info: null}
+Icd(116): {name: 'НЕКОТОРЫЕ БАКТЕРИАЛЬНЫЕ ЗООНОЗЫ', code: 'A20-A28',parent: 1,parent_code: 'A00-B99',node_count: 9,additional_info: null}
+Icd(117): {name: 'Чума', code: 'A20',parent: 116,parent_code: 'A20-A28',node_count: 7,additional_info: 'Включена: инфекция, вызванная Yersinia pestis'}
+Icd(118): {name: 'Бубонная чума', code: 'A20.0',parent: 117,parent_code: 'A20',node_count: 0,additional_info: null}
+Icd(119): {name: 'Целлюлярнокожная чума', code: 'A20.1',parent: 117,parent_code: 'A20',node_count: 0,additional_info: null}
+Icd(120): {name: 'Легочная чума', code: 'A20.2',parent: 117,parent_code: 'A20',node_count: 0,additional_info: null}
+Icd(121): {name: 'Чумной менингит', code: 'A20.3',parent: 117,parent_code: 'A20',node_count: 0,additional_info: null}
+Icd(122): {name: 'Септическая чума', code: 'A20.7',parent: 117,parent_code: 'A20',node_count: 0,additional_info: null}
+Icd(123): {name: 'Другие формы чумы', code: 'A20.8',parent: 117,parent_code: 'A20',node_count: 0,additional_info: 'Абортивная чума Бессимптомная чума Малая чума'}
+Icd(124): {name: 'Чума неуточненная', code: 'A20.9',parent: 117,parent_code: 'A20',node_count: 0,additional_info: null}
+Icd(125): {name: 'Туляремия', code: 'A21',parent: 116,parent_code: 'A20-A28',node_count: 7,additional_info: 'Включены: лихорадка оленьей мухи инфекция, вызванная Francisella tularensis кроличья лихорадка'}
+Icd(126): {name: 'Ульцерогландулярная туляремия', code: 'A21.0',parent: 125,parent_code: 'A21',node_count: 0,additional_info: null}
+Icd(127): {name: 'Окулогландулярная туляремия', code: 'A21.1',parent: 125,parent_code: 'A21',node_count: 0,additional_info: 'Офтальмическая туляремия'}
+Icd(128): {name: 'Легочная туляремия', code: 'A21.2',parent: 125,parent_code: 'A21',node_count: 0,additional_info: null}
+Icd(129): {name: 'Желудочно-кишечная туляремия', code: 'A21.3',parent: 125,parent_code: 'A21',node_count: 0,additional_info: 'Абдоминальная туляремия'}
+Icd(130): {name: 'Генерализованная туляремия', code: 'A21.7',parent: 125,parent_code: 'A21',node_count: 0,additional_info: null}
+Icd(131): {name: 'Другие формы туляремии', code: 'A21.8',parent: 125,parent_code: 'A21',node_count: 0,additional_info: null}
+Icd(132): {name: 'Туляремия неуточненная', code: 'A21.9',parent: 125,parent_code: 'A21',node_count: 0,additional_info: null}
+Icd(133): {name: 'Сибирская язва', code: 'A22',parent: 116,parent_code: 'A20-A28',node_count: 6,additional_info: 'Включена: инфекция, вызванная Bacillus anthracis'}
+Icd(134): {name: 'Кожная форма сибирской язвы', code: 'A22.0',parent: 133,parent_code: 'A22',node_count: 0,additional_info: 'Злокачественный(ая): . карбункул . пустула'}
+Icd(135): {name: 'Легочная форма сибирской язвы', code: 'A22.1',parent: 133,parent_code: 'A22',node_count: 0,additional_info: 'Респираторная форма сибирской язвы Болезнь тряпичников Болезнь сортировщиков шерсти'}
+Icd(136): {name: 'Желудочно-кишечная форма сибирской язвы', code: 'A22.2',parent: 133,parent_code: 'A22',node_count: 0,additional_info: null}
+Icd(137): {name: 'Сибиреязвенная септицемия', code: 'A22.7',parent: 133,parent_code: 'A22',node_count: 0,additional_info: null}
+Icd(138): {name: 'Другие формы сибирской язвы', code: 'A22.8',parent: 133,parent_code: 'A22',node_count: 0,additional_info: 'Сибиреязвенный менингит+ (G01*)'}
+Icd(139): {name: 'Сибирская язва неуточненная', code: 'A22.9',parent: 133,parent_code: 'A22',node_count: 0,additional_info: null}
+Icd(140): {name: 'Бруцеллез', code: 'A23',parent: 116,parent_code: 'A20-A28',node_count: 6,additional_info: 'Включена: лихорадка: . мальтийская . средиземноморская . ундулирующая'}
+Icd(141): {name: 'Бруцеллез, вызванный Brucella melitensis', code: 'A23.0',parent: 140,parent_code: 'A23',node_count: 0,additional_info: null}
+Icd(142): {name: 'Бруцеллез, вызванный Brucella abortus', code: 'A23.1',parent: 140,parent_code: 'A23',node_count: 0,additional_info: null}
+Icd(143): {name: 'Бруцеллез, вызванный Brucella suis', code: 'A23.2',parent: 140,parent_code: 'A23',node_count: 0,additional_info: null}
+Icd(144): {name: 'Бруцеллез, вызванный Brucella canis', code: 'A23.3',parent: 140,parent_code: 'A23',node_count: 0,additional_info: null}
+Icd(145): {name: 'Другие формы бруцеллеза', code: 'A23.8',parent: 140,parent_code: 'A23',node_count: 0,additional_info: null}
+Icd(146): {name: 'Бруцеллез неуточненный', code: 'A23.9',parent: 140,parent_code: 'A23',node_count: 0,additional_info: null}
+Icd(147): {name: 'Сап и мелиоидоз', code: 'A24',parent: 116,parent_code: 'A20-A28',node_count: 5,additional_info: null}
+Icd(148): {name: 'Сап', code: 'A24.0',parent: 147,parent_code: 'A24',node_count: 0,additional_info: 'Инфекция, вызванная Pseudomonas mallei'}
+Icd(149): {name: 'Острый или молниеносный мелиоидоз', code: 'A24.1',parent: 147,parent_code: 'A24',node_count: 0,additional_info: 'Мелиоидозная: . пневмония . септицемия'}
+Icd(150): {name: 'Подострый и хронический мелиоидоз', code: 'A24.2',parent: 147,parent_code: 'A24',node_count: 0,additional_info: null}
+Icd(151): {name: 'Другой уточненный мелиоидоз', code: 'A24.3',parent: 147,parent_code: 'A24',node_count: 0,additional_info: null}
+Icd(152): {name: 'Мелиоидоз неуточненный', code: 'A24.4',parent: 147,parent_code: 'A24',node_count: 0,additional_info: 'Инфекция, вызванная Pseudomonas pseudomallei БДУ Болезнь Уитмора'}
+Icd(153): {name: 'Лихорадка от укуса крыс', code: 'A25',parent: 116,parent_code: 'A20-A28',node_count: 3,additional_info: null}
+Icd(154): {name: 'Спириллез', code: 'A25.0',parent: 153,parent_code: 'A25',node_count: 0,additional_info: 'Содоку'}
+Icd(155): {name: 'Стрептобациллез', code: 'A25.1',parent: 153,parent_code: 'A25',node_count: 0,additional_info: 'Эпидемическая суставная эритема Хейверхилльская лихорадка Стрептобациллярная лихорадка от укуса крыс'}
+Icd(156): {name: 'Лихорадка от укуса крыс неуточненная', code: 'A25.9',parent: 153,parent_code: 'A25',node_count: 0,additional_info: null}
+Icd(157): {name: 'Эризипелоид', code: 'A26',parent: 116,parent_code: 'A20-A28',node_count: 4,additional_info: null}
+Icd(158): {name: 'Кожный эризипелоид', code: 'A26.0',parent: 157,parent_code: 'A26',node_count: 0,additional_info: 'Блуждающая эритема'}
+Icd(159): {name: 'Септицемия, вызванная Erysipelothrix', code: 'A26.7',parent: 157,parent_code: 'A26',node_count: 0,additional_info: null}
+Icd(160): {name: 'Другие формы эризипелоида', code: 'A26.8',parent: 157,parent_code: 'A26',node_count: 0,additional_info: null}
+Icd(161): {name: 'Эризипелоид неуточненный', code: 'A26.9',parent: 157,parent_code: 'A26',node_count: 0,additional_info: null}
+Icd(162): {name: 'Лептоспироз', code: 'A27',parent: 116,parent_code: 'A20-A28',node_count: 3,additional_info: null}
+Icd(163): {name: 'Лептоспироз желтушно-геморрагический', code: 'A27.0',parent: 162,parent_code: 'A27',node_count: 0,additional_info: 'Лептоспироз, вызванный Leptospira interrogans, серовар icterohaemorrhagiae'}
+Icd(164): {name: 'Другие формы лептоспироза', code: 'A27.8',parent: 162,parent_code: 'A27',node_count: 0,additional_info: null}
+Icd(165): {name: 'Лептоспироз неуточненный', code: 'A27.9',parent: 162,parent_code: 'A27',node_count: 0,additional_info: null}
+Icd(166): {name: 'Другие бактериальные зоонозы, не классифицированные в других рубриках', code: 'A28',parent: 116,parent_code: 'A20-A28',node_count: 5,additional_info: null}
+Icd(167): {name: 'Пастереллез', code: 'A28.0',parent: 166,parent_code: 'A28',node_count: 0,additional_info: null}
+Icd(168): {name: 'Лихорадка от кошачьих царапин', code: 'A28.1',parent: 166,parent_code: 'A28',node_count: 0,additional_info: 'Болезнь кошачьих царапин'}
+Icd(169): {name: 'Экстраинтестинальный иерсиниоз', code: 'A28.2',parent: 166,parent_code: 'A28',node_count: 0,additional_info: 'Исключены: энтерит, вызванный Yersinia enterocolitica (A04.6) чума (A20.-)'}
+Icd(170): {name: 'Другие уточненные бактериальные зоонозы, не классифи-', code: 'A28.8',parent: 166,parent_code: 'A28',node_count: 0,additional_info: 'цированные в других рубриках'}
+Icd(171): {name: 'Бактериальные зоонозы неуточненные', code: 'A28.9',parent: 166,parent_code: 'A28',node_count: 0,additional_info: null}
+Icd(173): {name: 'ДРУГИЕ БАКТЕРИАЛЬНЫЕ БОЛЕЗНИ', code: 'A30-A49',parent: 1,parent_code: 'A00-B99',node_count: 18,additional_info: null}
+Icd(174): {name: 'Лепра [болезнь Гансена]', code: 'A30',parent: 173,parent_code: 'A30-A49',node_count: 8,additional_info: 'Включена: инфекция, вызванная Mycobacterium leprae Исключены: отдаленные последствия лепры (B92)'}
+Icd(175): {name: 'Недифференцированная лепра', code: 'A30.0',parent: 174,parent_code: 'A30',node_count: 0,additional_info: 'Лепра I'}
+Icd(176): {name: 'Туберкулоидная лепра', code: 'A30.1',parent: 174,parent_code: 'A30',node_count: 0,additional_info: 'Лепра TT'}
+Icd(177): {name: 'Пограничная туберкулоидная лепра', code: 'A30.2',parent: 174,parent_code: 'A30',node_count: 0,additional_info: 'Лепра BT'}
+Icd(178): {name: 'Пограничная лепра', code: 'A30.3',parent: 174,parent_code: 'A30',node_count: 0,additional_info: 'Лепра BB'}
+Icd(179): {name: 'Пограничная лепроматозная лепра', code: 'A30.4',parent: 174,parent_code: 'A30',node_count: 0,additional_info: 'Лепра BL'}
+Icd(180): {name: 'Лепроматозная лепра', code: 'A30.5',parent: 174,parent_code: 'A30',node_count: 0,additional_info: 'Лепра LL'}
+Icd(181): {name: 'Другие формы лепры', code: 'A30.8',parent: 174,parent_code: 'A30',node_count: 0,additional_info: null}
+Icd(182): {name: 'Лепра неуточненная', code: 'A30.9',parent: 174,parent_code: 'A30',node_count: 0,additional_info: null}
+Icd(183): {name: 'Инфекции, вызванные другими микобактериями', code: 'A31',parent: 173,parent_code: 'A30-A49',node_count: 4,additional_info: 'Исключены: лепра (A30.-) туберкулез (A15-A19)'}
+Icd(184): {name: 'Легочная инфекция, вызванная Mycobacterium', code: 'A31.0',parent: 183,parent_code: 'A31',node_count: 0,additional_info: 'Инфекция, вызванная Mycobacterium: . avium . intracellulare [Battey bacillus] . kansasii'}
+Icd(185): {name: 'Кожная инфекция, вызванная Mycobacterium', code: 'A31.1',parent: 183,parent_code: 'A31',node_count: 0,additional_info: 'Язва Бурули Инфекция, вызванная Mycobacterium: . marinum . ulcerans'}
+Icd(186): {name: 'Другие инфекции, вызванные Mycobacterium', code: 'A31.8',parent: 183,parent_code: 'A31',node_count: 0,additional_info: null}
+Icd(187): {name: 'Инфекция, вызванная Mycobacterium, неуточненная', code: 'A31.9',parent: 183,parent_code: 'A31',node_count: 0,additional_info: 'Атипичная микобактериальная инфекция БДУ Микобактериоз БДУ'}
+Icd(188): {name: 'Листериоз', code: 'A32',parent: 173,parent_code: 'A30-A49',node_count: 5,additional_info: 'Включена: листериозная пищевая инфекция Исключена: неонатальный (диссеминированный) листериоз (P37.2)'}
+Icd(189): {name: 'Кожный листериоз', code: 'A32.0',parent: 188,parent_code: 'A32',node_count: 0,additional_info: null}
+Icd(190): {name: 'Листериозный менингит и менингоэнцефалит', code: 'A32.1+',parent: 188,parent_code: 'A32',node_count: 0,additional_info: 'Листериозный: . менингит (G01*) . менингоэнцефалит (G05.0*)'}
+Icd(191): {name: 'Листериозная септицемия', code: 'A32.7',parent: 188,parent_code: 'A32',node_count: 0,additional_info: null}
+Icd(192): {name: 'Другие формы листериоза', code: 'A32.8',parent: 188,parent_code: 'A32',node_count: 0,additional_info: 'Листериозный: . церебральный артрит+ (I68.1*) . эндокардит+ (I39.8*) Окулогландулярный листериоз'}
+Icd(193): {name: 'Листериоз неуточненный', code: 'A32.9',parent: 188,parent_code: 'A32',node_count: 0,additional_info: null}
+Icd(194): {name: 'Столбняк новорожденного', code: 'A33',parent: 173,parent_code: 'A30-A49',node_count: 0,additional_info: null}
+Icd(195): {name: 'Акушерский столбняк', code: 'A34',parent: 173,parent_code: 'A30-A49',node_count: 0,additional_info: null}
+Icd(196): {name: 'Другие формы столбняка', code: 'A35',parent: 173,parent_code: 'A30-A49',node_count: 0,additional_info: 'Столбняк БДУ Исключен: столбняк: . новорожденного (A33) . акушерский (A34)'}
+Icd(197): {name: 'Дифтерия', code: 'A36',parent: 173,parent_code: 'A30-A49',node_count: 6,additional_info: null}
+Icd(198): {name: 'Дифтерия глотки', code: 'A36.0',parent: 197,parent_code: 'A36',node_count: 0,additional_info: 'Дифтерийная мембранозная ангина Тонзилярная дифтерия'}
+Icd(199): {name: 'Дифтерия носоглотки', code: 'A36.1',parent: 197,parent_code: 'A36',node_count: 0,additional_info: null}
+Icd(200): {name: 'Дифтерия гортани', code: 'A36.2',parent: 197,parent_code: 'A36',node_count: 0,additional_info: 'Ларинготрахеит дифтерийный'}
+Icd(201): {name: 'Дифтерия кожи', code: 'A36.3',parent: 197,parent_code: 'A36',node_count: 0,additional_info: 'Исключена: эритразма (I08.1)'}
+Icd(202): {name: 'Другая дифтерия', code: 'A36.8',parent: 197,parent_code: 'A36',node_count: 0,additional_info: 'Конъюнктивальная дифтерия+ (H13.1*) Дифтерийный: . миокардит+ (I41.0*) . полиневрит+ (G63.0*)'}
+Icd(203): {name: 'Дифтерия неуточненная', code: 'A36.9',parent: 197,parent_code: 'A36',node_count: 0,additional_info: null}
+Icd(204): {name: 'Коклюш', code: 'A37',parent: 173,parent_code: 'A30-A49',node_count: 4,additional_info: null}
+Icd(205): {name: 'Коклюш, вызванный Bordetella pertussis', code: 'A37.0',parent: 204,parent_code: 'A37',node_count: 0,additional_info: null}
+Icd(206): {name: 'Коклюш, вызванный Bordetella parapertussis', code: 'A37.1',parent: 204,parent_code: 'A37',node_count: 0,additional_info: null}
+Icd(207): {name: 'Коклюш, вызванный другим уточненным возбудителем вида Bordetella', code: 'A37.8',parent: 204,parent_code: 'A37',node_count: 0,additional_info: null}
+Icd(208): {name: 'Коклюш неуточненный', code: 'A37.9',parent: 204,parent_code: 'A37',node_count: 0,additional_info: null}
+Icd(209): {name: 'Скарлатина', code: 'A38',parent: 173,parent_code: 'A30-A49',node_count: 0,additional_info: 'Исключена: стрептококковая ангина (J02.0)'}
+Icd(210): {name: 'Менингококковая инфекция', code: 'A39',parent: 173,parent_code: 'A30-A49',node_count: 8,additional_info: null}
+Icd(211): {name: 'Менингококковый менингит (G01*)', code: 'A39.0',parent: 210,parent_code: 'A39',node_count: 0,additional_info: null}
+Icd(212): {name: 'Синдром Уотерхауса-Фридериксена (E35.1*)', code: 'A39.1+',parent: 210,parent_code: 'A39',node_count: 0,additional_info: 'Менингококковый геморрагический адреналит Менингококковый адреналовый синдром'}
+Icd(213): {name: 'Острая менингококкемия', code: 'A39.2',parent: 210,parent_code: 'A39',node_count: 0,additional_info: null}
+Icd(214): {name: 'Хроническая менингококкемия', code: 'A39.3',parent: 210,parent_code: 'A39',node_count: 0,additional_info: null}
+Icd(215): {name: 'Менингококкемия неуточненная', code: 'A39.4',parent: 210,parent_code: 'A39',node_count: 0,additional_info: 'Менингококковая бактериемия БДУ'}
+Icd(216): {name: 'Менингококковая болезнь сердца', code: 'A39.5+',parent: 210,parent_code: 'A39',node_count: 0,additional_info: 'Менингококковый: . кардит БДУ (I52.0*) . эндокардит (I39.0*) . миокардит (I41.0*) . перикардит (I32.0*)'}
+Icd(217): {name: 'Другие менингококковые инфекции', code: 'A39.8',parent: 210,parent_code: 'A39',node_count: 0,additional_info: 'Менингококковый: . артрит+ (M01.0*) . конъюнктивит+ (H13.1*) . энцефалит+ (G05.0*) . неврит зрительного нерва+ (H48.1*) Постменингококковый артрит+ (M03.0*)'}
+Icd(218): {name: 'Менингококковая инфекция неуточненная', code: 'A39.9',parent: 210,parent_code: 'A39',node_count: 0,additional_info: 'Менингококковая болезнь БДУ'}
+Icd(219): {name: 'Стрептококковая септицемия', code: 'A40',parent: 173,parent_code: 'A30-A49',node_count: 6,additional_info: 'Исключена: в период родов (O75.3) последовавшая за: . абортом, внематочной или молярной беременностью (O03-O07, O08.0) . иммунизацией (T88.0) . инфузией, трансфузией или терапевтической инъекцией (T80.2) неонатальная (P36.0-P36.1) постпроцедурная (T81.4) послеродовая (O85)'}
+Icd(220): {name: 'Септицемия, вызванная стрептококком группы A', code: 'A40.0',parent: 219,parent_code: 'A40',node_count: 0,additional_info: null}

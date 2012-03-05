@@ -7,5 +7,5 @@ import play.*;
 import java.util.*;
 
 
-@CRUD.For(models.LogHistory.class)
-public class LogHistory extends CRUD  {}
+@CRUD.For(models.Icd.class)
+public class Icd extends CRUD  {}

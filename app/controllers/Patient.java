@@ -22,14 +22,14 @@ public class Patient extends Controller {
     	User user = Application.connected();
     	StoreArgs storeArgs = new StoreArgs();
     	//String find ="  order by ";
-    	String find =" order by ";
+    	String find =" user.id=? order by ";
     	String sort = storeArgs.OrderString();
     	if(sort==null)
     		find+=" name ";
     	else
     		find+=sort;
     	System.out.println("find="+find);
-    	List<models.Patient> items = models.Patient.find(find ).fetch(storeArgs.page, storeArgs.limit);
+    	List<models.Patient> items = models.Patient.find(find , user.id).fetch(storeArgs.page, storeArgs.limit);
     	List<PatientList> list = PatientList.ConverPatient(items);
 
         renderJSON(list);
@@ -44,21 +44,22 @@ public class Patient extends Controller {
         renderJSON(list);
     }
 
-    public static void add(String name, String sex, @As("MM/dd/yyyy") Date birthday, Long country_id,  String zipCode, String city,  String address,  String address1,  String tel	) {
+    public static void add(String first_name, String last_name, String middle_name, String sex, @As("MM/dd/yyyy") Date birthday, Long country_id,  String zipCode, Long city_id,  String address,  String address1,  String tel	) {
     	User user = Application.connected();
     	models.Patient parient =new models.Patient();
     	 parient.country = models.Country.findById(country_id);
-    	 parient.region = models.Region.findById(new Long((long)1));
-    	 parient.name = name;
+    	 parient.first_name = first_name;
+    	 parient.last_name = last_name;
+    	 parient.middle_name = middle_name;
     	 parient.sex = sex;
     	 parient.birthday = birthday;
-    	 parient.city = city;
-    	 parient.isCity = true;
+    	 parient.city = models.City.findById(city_id);
     	 parient.zipCode = zipCode;
     	 parient.address = address;
     	 parient.address1 = address1;
     	 parient.tel = tel;
     	 parient.save();
+    	 parient.user = user;
         renderJSON( new  extjs.Response(true, parient.id));
     }
     

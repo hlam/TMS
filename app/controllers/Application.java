@@ -33,6 +33,7 @@ public class Application extends Controller {
         }
         if(params.get("lang")!=null)
         	Lang.change(params.get("lang"));
+        //if(Lang.get().equals(null)) Lang.change("uk");
         //renderArgs.put("langs", play.Play.langs);
         
     }
@@ -129,7 +130,9 @@ public class Application extends Controller {
     
     public static void registerUser(
     		String lpz_id,
-    		@Required String name,
+    		@Required String first_name,
+    		@Required String last_name,
+    		String  middle_name,
     		@Required @Email String email,
     		@Required Long rank_id,
     		@Required Long speciality_id,
@@ -172,7 +175,7 @@ public class Application extends Controller {
         	}
 
         	initregistartion();
-            render("@registartion", lpz_id, name, email, rank_id, speciality_id, sex, birthday, region_id, lpz, new_lpz,  randomID);
+            render("@registartion", lpz_id, first_name,last_name ,middle_name , email, rank_id, speciality_id, sex, birthday, region_id, lpz, new_lpz,  randomID);
         }
         if(new_lpz==null || !new_lpz){
         	lpz = Lpz.findById(Long.parseLong(lpz_id));
@@ -185,11 +188,20 @@ public class Application extends Controller {
         user.birthday = birthday;
         user.email = email;
         user.lpz = lpz;
-        user.name = name;
+        user.first_name = first_name;
+        user.last_name = last_name;
+        user.middle_name = middle_name;
+        
         user.password = password;
         user.rank = models.Rank.findById(rank_id);
         user.speciality = models.Speciality.findById(speciality_id);
         user.sex = sex;
+        user.status = User.Status.REGISTERED;
+        if(new_lpz==null || !new_lpz){
+            user.admin = User.AdminStatus.NONE;
+        }else{
+            user.admin = User.AdminStatus.ADMIN;
+        }
         user.create();
         
         models.Advisor advisor = new models.Advisor();
@@ -217,7 +229,7 @@ public class Application extends Controller {
         User user = User.find("byEmailAndPassword", login, password).first();
         if(user != null) {
             session.put("user", user.id);
-            renderJSON( new  extjs.Response(true, new UserLogin(user.id, user.name)));
+            renderJSON( new  extjs.Response(true, new UserLogin(user.id, user.getName())));
         }
         renderJSON( new  extjs.Response(false, "IncorectLoginOrPassword"));
     }

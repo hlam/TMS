@@ -27,7 +27,10 @@ $(function(){
 	  	if($("#intro_login").length>0){
 	  		initLoginForm();
 	  	}else{
-	  		$('#intro_login_form_submiter').click(function(){window.location="/sys"});
+	  		$('#intro_login_form_submiter').click(function(event){
+	  				window.location="/sys";
+	  				event.stopPropagation();
+	  				});
 	  	}
 	  	if($.datepicker){
 			if($.datepicker.regional[lang])

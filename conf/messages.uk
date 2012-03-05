@@ -1,6 +1,12 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+
+lang.en=English
+lang.ru=Русский
+lang.uk=Український
+mail.from_email = info <nikolas@ukr.net>
+
 site.title=Українська Телемедична Система
 site.your_login = Ваш логін
 site.your_password = Ваш пароль
@@ -31,6 +37,10 @@ site.user = Користувач
 site.rank = Звання
 site.speciality = Спеціальність
 site.fio = ПІБ
+site.first_name = Ім'я
+site.last_name = Прізвище
+site.middle_name = По батькові
+site.boss = Керівник
 site.sex = Пол
 site.sex_m = Чоловік
 site.sex_f = Женшина
